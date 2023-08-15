@@ -1,0 +1,38 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst platform.timer_min -pg 1 -lvl 3 -y 350
+preplace inst platform.cpu -pg 1 -lvl 2 -y 520
+preplace inst platform.ROM -pg 1 -lvl 3 -y 530
+preplace inst platform.RAM -pg 1 -lvl 3 -y 450
+preplace inst platform.timer_S -pg 1 -lvl 3 -y 250
+preplace inst platform.segmentos_1 -pg 1 -lvl 3 -y 610
+preplace inst platform.segmentos_2 -pg 1 -lvl 3 -y 710
+preplace inst platform.cpu.cpu -pg 1
+preplace inst platform.segmentos_3 -pg 1 -lvl 3 -y 810
+preplace inst platform.button -pg 1 -lvl 3 -y 30
+preplace inst platform -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst platform.segmentos_4 -pg 1 -lvl 3 -y 1210
+preplace inst platform.switchs -pg 1 -lvl 3 -y 1110
+preplace inst platform.segmentos_5 -pg 1 -lvl 3 -y 910
+preplace inst platform.segmentos_6 -pg 1 -lvl 3 -y 1010
+preplace inst platform.cpu.reset_bridge -pg 1
+preplace inst platform.cpu.clock_bridge -pg 1
+preplace inst platform.timer_MS -pg 1 -lvl 3 -y 150
+preplace inst platform.clk_0 -pg 1 -lvl 1 -y 650
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)clk_0.clk_in,(SLAVE)platform.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)segmentos_6.external_connection,(SLAVE)platform.segmentos_6_external_connection) 1 0 3 NJ 1040 NJ 1040 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.id7_segmentos_1_external_connection,(SLAVE)segmentos_1.external_connection) 1 0 3 NJ 640 NJ 640 NJ
+preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)switchs.s1,(SLAVE)segmentos_4.s1,(SLAVE)segmentos_3.s1,(SLAVE)timer_min.s1,(SLAVE)timer_S.s1,(SLAVE)button.s1,(SLAVE)segmentos_2.s1,(SLAVE)segmentos_5.s1,(MASTER)cpu.data_master,(SLAVE)timer_MS.s1,(SLAVE)RAM.s1,(SLAVE)segmentos_1.s1,(SLAVE)segmentos_6.s1) 1 2 1 750
+preplace netloc FAN_OUT<net_container>platform</net_container>(MASTER)cpu.irq,(SLAVE)timer_S.irq,(SLAVE)button.irq,(SLAVE)timer_MS.irq,(SLAVE)timer_min.irq) 1 2 1 730
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.button_external_connection,(SLAVE)button.external_connection) 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)switchs.reset,(SLAVE)segmentos_5.reset,(SLAVE)timer_min.reset,(SLAVE)segmentos_1.reset,(SLAVE)timer_S.reset,(SLAVE)timer_MS.reset,(SLAVE)cpu.reset,(SLAVE)button.reset,(SLAVE)segmentos_6.reset,(SLAVE)RAM.reset1,(SLAVE)segmentos_2.reset,(SLAVE)ROM.reset1,(MASTER)clk_0.clk_reset,(SLAVE)segmentos_4.reset,(SLAVE)segmentos_3.reset) 1 1 2 430 1260 810
+preplace netloc POINT_TO_POINT<net_container>platform</net_container>(SLAVE)ROM.s1,(MASTER)cpu.instruction_master) 1 2 1 770
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.id7_segmentos_3_external_connection,(SLAVE)segmentos_3.external_connection) 1 0 3 NJ 840 NJ 840 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.segmentos_5_external_connection,(SLAVE)segmentos_5.external_connection) 1 0 3 NJ 940 NJ 940 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.id7_segmentos_4_external_connection,(SLAVE)segmentos_4.external_connection) 1 0 3 NJ 1240 NJ 1240 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)switchs.external_connection,(SLAVE)platform.switchs_external_connection) 1 0 3 NJ 1140 NJ 1140 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)segmentos_2.external_connection,(SLAVE)platform.id7_segmentos_2_external_connection) 1 0 3 NJ 740 NJ 740 NJ
+preplace netloc FAN_OUT<net_container>platform</net_container>(MASTER)clk_0.clk,(SLAVE)switchs.clk,(SLAVE)button.clk,(SLAVE)RAM.clk1,(SLAVE)segmentos_1.clk,(SLAVE)segmentos_5.clk,(SLAVE)segmentos_6.clk,(SLAVE)segmentos_3.clk,(SLAVE)ROM.clk1,(SLAVE)timer_MS.clk,(SLAVE)segmentos_4.clk,(SLAVE)timer_min.clk,(SLAVE)cpu.clk,(SLAVE)timer_S.clk,(SLAVE)segmentos_2.clk) 1 1 2 410 1160 790
+levelinfo -pg 1 0 200 1000
+levelinfo -hier platform 210 240 490 840 990
