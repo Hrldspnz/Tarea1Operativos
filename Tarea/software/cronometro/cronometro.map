@@ -123,7 +123,7 @@ LOAD /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/
                 0x0000000000000180                PROVIDE (__ram_exceptions_end = ABSOLUTE (.))
                 0x0000000000000020                PROVIDE (__flash_exceptions_start = LOADADDR (.exceptions))
 
-.text           0x0000000000000180      0x558
+.text           0x0000000000000180      0x6f8
                 [!provide]                        PROVIDE (stext = ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -170,47 +170,47 @@ LOAD /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text          0x0000000000000180       0x3c ../cronometro_bsp//obj/HAL/src/crt0.o
                 0x0000000000000180                _start
- .text          0x00000000000001bc       0xac obj/default/hello_world_small.o
- .text.startup  0x0000000000000268       0x44 obj/default/hello_world_small.o
-                0x0000000000000268                main
- .text          0x00000000000002ac      0x1b4 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
-                0x00000000000002ac                __divsi3
-                0x000000000000032c                __modsi3
-                0x00000000000003a0                __udivsi3
-                0x0000000000000404                __umodsi3
- .text          0x0000000000000460       0x8c ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
-                0x0000000000000460                alt_ic_isr_register
-                0x0000000000000464                alt_ic_irq_enable
-                0x000000000000049c                alt_ic_irq_disable
-                0x00000000000004d4                alt_ic_irq_enabled
- .text          0x00000000000004ec       0x68 ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
-                0x00000000000004ec                alt_iic_isr_register
- .text          0x0000000000000554        0x0 ../cronometro_bsp//libhal_bsp.a(alt_irq_entry.o)
- .text          0x0000000000000554        0x0 ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
- .text          0x0000000000000554        0x0 ../cronometro_bsp//libhal_bsp.a(alt_irq_vars.o)
- .text          0x0000000000000554       0xb4 ../cronometro_bsp//libhal_bsp.a(alt_load.o)
-                0x0000000000000554                alt_load
- .text          0x0000000000000608       0x2c ../cronometro_bsp//libhal_bsp.a(alt_main.o)
-                0x0000000000000608                alt_main
- .text          0x0000000000000634       0x24 ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
-                0x0000000000000634                alt_irq_init
-                0x0000000000000654                alt_sys_init
- .text          0x0000000000000658        0x4 ../cronometro_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
-                0x0000000000000658                alt_dcache_flush_all
- .text          0x000000000000065c        0x0 ../cronometro_bsp//libhal_bsp.a(alt_exception_entry.o)
- .text          0x000000000000065c        0x4 ../cronometro_bsp//libhal_bsp.a(alt_icache_flush_all.o)
-                0x000000000000065c                alt_icache_flush_all
- .text          0x0000000000000660       0x70 ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x0000000000000660                alt_exception_cause_generated_bad_addr
- .text          0x00000000000006d0        0x8 ../cronometro_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
-                0x00000000000006d0                altera_nios2_gen2_irq_init
+ .text          0x00000000000001bc      0x204 obj/default/hello_world_small.o
+ .text.startup  0x00000000000003c0       0x8c obj/default/hello_world_small.o
+                0x00000000000003c0                main
+ .text          0x000000000000044c      0x1b4 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+                0x000000000000044c                __divsi3
+                0x00000000000004cc                __modsi3
+                0x0000000000000540                __udivsi3
+                0x00000000000005a4                __umodsi3
+ .text          0x0000000000000600       0x8c ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
+                0x0000000000000600                alt_ic_isr_register
+                0x0000000000000604                alt_ic_irq_enable
+                0x000000000000063c                alt_ic_irq_disable
+                0x0000000000000674                alt_ic_irq_enabled
+ .text          0x000000000000068c       0x68 ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+                0x000000000000068c                alt_iic_isr_register
+ .text          0x00000000000006f4        0x0 ../cronometro_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .text          0x00000000000006f4        0x0 ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .text          0x00000000000006f4        0x0 ../cronometro_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .text          0x00000000000006f4       0xb4 ../cronometro_bsp//libhal_bsp.a(alt_load.o)
+                0x00000000000006f4                alt_load
+ .text          0x00000000000007a8       0x2c ../cronometro_bsp//libhal_bsp.a(alt_main.o)
+                0x00000000000007a8                alt_main
+ .text          0x00000000000007d4       0x24 ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x00000000000007d4                alt_irq_init
+                0x00000000000007f4                alt_sys_init
+ .text          0x00000000000007f8        0x4 ../cronometro_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                0x00000000000007f8                alt_dcache_flush_all
+ .text          0x00000000000007fc        0x0 ../cronometro_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .text          0x00000000000007fc        0x4 ../cronometro_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                0x00000000000007fc                alt_icache_flush_all
+ .text          0x0000000000000800       0x70 ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000000000800                alt_exception_cause_generated_bad_addr
+ .text          0x0000000000000870        0x8 ../cronometro_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000000000870                altera_nios2_gen2_irq_init
  *(.gnu.warning.*)
  *(.fini)
                 [!provide]                        PROVIDE (__etext = ABSOLUTE (.))
                 [!provide]                        PROVIDE (_etext = ABSOLUTE (.))
                 [!provide]                        PROVIDE (etext = ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x00000000000006d8                . = ALIGN (0x4)
+                0x0000000000000878                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__preinit_array_start = ABSOLUTE (.))
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end = ABSOLUTE (.))
@@ -232,9 +232,9 @@ LOAD /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/
  *(SORT_BY_NAME(.dtors.*))
                 [!provide]                        PROVIDE (__DTOR_END__ = ABSOLUTE (.))
  *(.jcr)
-                0x00000000000006d8                . = ALIGN (0x4)
+                0x0000000000000878                . = ALIGN (0x4)
 
-.rodata         0x0000000000010000        0xc load address 0x00000000000006d8
+.rodata         0x0000000000010000        0xc load address 0x0000000000000878
                 0x0000000000010000                PROVIDE (__ram_rodata_start = ABSOLUTE (.))
                 0x0000000000010000                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
@@ -243,9 +243,9 @@ LOAD /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/
                 0x000000000001000c                . = ALIGN (0x4)
  *fill*         0x0000000000010009        0x3 
                 0x000000000001000c                PROVIDE (__ram_rodata_end = ABSOLUTE (.))
-                0x00000000000006d8                PROVIDE (__flash_rodata_start = LOADADDR (.rodata))
+                0x0000000000000878                PROVIDE (__flash_rodata_start = LOADADDR (.rodata))
 
-.rwdata         0x000000000001000c        0x4 load address 0x00000000000006e4
+.rwdata         0x000000000001000c        0x4 load address 0x0000000000000884
                 0x000000000001000c                PROVIDE (__ram_rwdata_start = ABSOLUTE (.))
                 0x000000000001000c                . = ALIGN (0x4)
  *(.got.plt)
@@ -279,66 +279,66 @@ LOAD /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/
                 0x0000000000010010                _edata = ABSOLUTE (.)
                 [!provide]                        PROVIDE (edata = ABSOLUTE (.))
                 0x0000000000010010                PROVIDE (__ram_rwdata_end = ABSOLUTE (.))
-                0x00000000000006e4                PROVIDE (__flash_rwdata_start = LOADADDR (.rwdata))
+                0x0000000000000884                PROVIDE (__flash_rwdata_start = LOADADDR (.rwdata))
 
-.bss            0x0000000000010010      0x118 load address 0x00000000000006e8
+.bss            0x0000000000010010      0x120 load address 0x0000000000000888
                 0x0000000000010010                __bss_start = ABSOLUTE (.)
                 [!provide]                        PROVIDE (__sbss_start = ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_start = ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x0000000000010010        0x4 obj/default/hello_world_small.o
- .sbss          0x0000000000010014        0x4 ../cronometro_bsp//libhal_bsp.a(alt_irq_vars.o)
-                0x0000000000010014                alt_irq_active
- .sbss          0x0000000000010018        0xc ../cronometro_bsp//libhal_bsp.a(alt_main.o)
-                0x0000000000010018                alt_envp
-                0x000000000001001c                alt_argv
-                0x0000000000010020                alt_argc
- .sbss          0x0000000000010024        0x4 ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x0000000000010024                alt_instruction_exception_handler
+ .sbss          0x0000000000010010        0xc obj/default/hello_world_small.o
+ .sbss          0x000000000001001c        0x4 ../cronometro_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x000000000001001c                alt_irq_active
+ .sbss          0x0000000000010020        0xc ../cronometro_bsp//libhal_bsp.a(alt_main.o)
+                0x0000000000010020                alt_envp
+                0x0000000000010024                alt_argv
+                0x0000000000010028                alt_argc
+ .sbss          0x000000000001002c        0x4 ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x000000000001002c                alt_instruction_exception_handler
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
  *(.scommon)
                 [!provide]                        PROVIDE (__sbss_end = ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_end = ABSOLUTE (.))
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0000000000010028        0x0 ../cronometro_bsp//obj/HAL/src/crt0.o
- .bss           0x0000000000010028        0x0 obj/default/hello_world_small.o
- .bss           0x0000000000010028        0x0 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
- .bss           0x0000000000010028        0x0 ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
- .bss           0x0000000000010028        0x0 ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .bss           0x0000000000010028        0x0 ../cronometro_bsp//libhal_bsp.a(alt_irq_entry.o)
- .bss           0x0000000000010028        0x0 ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
- .bss           0x0000000000010028        0x0 ../cronometro_bsp//libhal_bsp.a(alt_irq_vars.o)
- .bss           0x0000000000010028        0x0 ../cronometro_bsp//libhal_bsp.a(alt_load.o)
- .bss           0x0000000000010028        0x0 ../cronometro_bsp//libhal_bsp.a(alt_main.o)
- .bss           0x0000000000010028        0x0 ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
- .bss           0x0000000000010028        0x0 ../cronometro_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .bss           0x0000000000010028        0x0 ../cronometro_bsp//libhal_bsp.a(alt_exception_entry.o)
- .bss           0x0000000000010028        0x0 ../cronometro_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .bss           0x0000000000010028        0x0 ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
- .bss           0x0000000000010028        0x0 ../cronometro_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x0000000000010030        0x0 ../cronometro_bsp//obj/HAL/src/crt0.o
+ .bss           0x0000000000010030        0x0 obj/default/hello_world_small.o
+ .bss           0x0000000000010030        0x0 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .bss           0x0000000000010030        0x0 ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
+ .bss           0x0000000000010030        0x0 ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .bss           0x0000000000010030        0x0 ../cronometro_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x0000000000010030        0x0 ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x0000000000010030        0x0 ../cronometro_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x0000000000010030        0x0 ../cronometro_bsp//libhal_bsp.a(alt_load.o)
+ .bss           0x0000000000010030        0x0 ../cronometro_bsp//libhal_bsp.a(alt_main.o)
+ .bss           0x0000000000010030        0x0 ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
+ .bss           0x0000000000010030        0x0 ../cronometro_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x0000000000010030        0x0 ../cronometro_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x0000000000010030        0x0 ../cronometro_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x0000000000010030        0x0 ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .bss           0x0000000000010030        0x0 ../cronometro_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
  *(COMMON)
- COMMON         0x0000000000010028      0x100 ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
-                0x0000000000010028                alt_irq
-                0x0000000000010128                . = ALIGN (0x4)
-                0x0000000000010128                __bss_end = ABSOLUTE (.)
+ COMMON         0x0000000000010030      0x100 ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
+                0x0000000000010030                alt_irq
+                0x0000000000010130                . = ALIGN (0x4)
+                0x0000000000010130                __bss_end = ABSOLUTE (.)
 
-.ROM            0x00000000000006e8        0x0
+.ROM            0x0000000000000888        0x0
                 [!provide]                        PROVIDE (_alt_partition_ROM_start = ABSOLUTE (.))
  *(.ROM .ROM. ROM.*)
-                0x00000000000006e8                . = ALIGN (0x4)
+                0x0000000000000888                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_ROM_end = ABSOLUTE (.))
                 [!provide]                        PROVIDE (_alt_partition_ROM_load_addr = LOADADDR (.ROM))
 
-.RAM            0x0000000000010128        0x0 load address 0x00000000000006e8
+.RAM            0x0000000000010130        0x0 load address 0x0000000000000888
                 [!provide]                        PROVIDE (_alt_partition_RAM_start = ABSOLUTE (.))
  *(.RAM .RAM. RAM.*)
-                0x0000000000010128                . = ALIGN (0x4)
+                0x0000000000010130                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_RAM_end = ABSOLUTE (.))
-                0x0000000000010128                _end = ABSOLUTE (.)
-                0x0000000000010128                end = ABSOLUTE (.)
-                0x0000000000010128                __alt_stack_base = ABSOLUTE (.)
+                0x0000000000010130                _end = ABSOLUTE (.)
+                0x0000000000010130                end = ABSOLUTE (.)
+                0x0000000000010130                __alt_stack_base = ABSOLUTE (.)
                 [!provide]                        PROVIDE (_alt_partition_RAM_load_addr = LOADADDR (.RAM))
 
 .stab
@@ -426,122 +426,122 @@ LOAD /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x7292
+.debug_info     0x0000000000000000     0x73f0
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000       0x22 ../cronometro_bsp//obj/HAL/src/crt0.o
- .debug_info    0x0000000000000022      0xaa9 obj/default/hello_world_small.o
- .debug_info    0x0000000000000acb      0x368 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
- .debug_info    0x0000000000000e33      0xca2 ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
- .debug_info    0x0000000000001ad5      0xb3a ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .debug_info    0x000000000000260f       0x22 ../cronometro_bsp//libhal_bsp.a(alt_irq_entry.o)
- .debug_info    0x0000000000002631      0xa61 ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_info    0x0000000000003092       0x8b ../cronometro_bsp//libhal_bsp.a(alt_irq_vars.o)
- .debug_info    0x000000000000311d      0xaed ../cronometro_bsp//libhal_bsp.a(alt_load.o)
- .debug_info    0x0000000000003c0a      0xeb0 ../cronometro_bsp//libhal_bsp.a(alt_main.o)
- .debug_info    0x0000000000004aba      0x9ea ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
- .debug_info    0x00000000000054a4      0x934 ../cronometro_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_info    0x0000000000005dd8       0x22 ../cronometro_bsp//libhal_bsp.a(alt_exception_entry.o)
- .debug_info    0x0000000000005dfa      0x934 ../cronometro_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .debug_info    0x000000000000672e      0x20f ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_info    0x000000000000693d      0x955 ../cronometro_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x0000000000000022      0xc07 obj/default/hello_world_small.o
+ .debug_info    0x0000000000000c29      0x368 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_info    0x0000000000000f91      0xca2 ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_info    0x0000000000001c33      0xb3a ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_info    0x000000000000276d       0x22 ../cronometro_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x000000000000278f      0xa61 ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x00000000000031f0       0x8b ../cronometro_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x000000000000327b      0xaed ../cronometro_bsp//libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000000000003d68      0xeb0 ../cronometro_bsp//libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000000000004c18      0x9ea ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x0000000000005602      0x934 ../cronometro_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x0000000000005f36       0x22 ../cronometro_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x0000000000005f58      0x934 ../cronometro_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x000000000000688c      0x20f ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_info    0x0000000000006a9b      0x955 ../cronometro_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_abbrev   0x0000000000000000     0x1ac1
+.debug_abbrev   0x0000000000000000     0x1aff
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000       0x12 ../cronometro_bsp//obj/HAL/src/crt0.o
- .debug_abbrev  0x0000000000000012      0x2bc obj/default/hello_world_small.o
- .debug_abbrev  0x00000000000002ce      0x103 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
- .debug_abbrev  0x00000000000003d1      0x31f ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
- .debug_abbrev  0x00000000000006f0      0x303 ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .debug_abbrev  0x00000000000009f3       0x12 ../cronometro_bsp//libhal_bsp.a(alt_irq_entry.o)
- .debug_abbrev  0x0000000000000a05      0x283 ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_abbrev  0x0000000000000c88       0x44 ../cronometro_bsp//libhal_bsp.a(alt_irq_vars.o)
- .debug_abbrev  0x0000000000000ccc      0x277 ../cronometro_bsp//libhal_bsp.a(alt_load.o)
- .debug_abbrev  0x0000000000000f43      0x252 ../cronometro_bsp//libhal_bsp.a(alt_main.o)
- .debug_abbrev  0x0000000000001195      0x25f ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
- .debug_abbrev  0x00000000000013f4      0x1e0 ../cronometro_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_abbrev  0x00000000000015d4       0x12 ../cronometro_bsp//libhal_bsp.a(alt_exception_entry.o)
- .debug_abbrev  0x00000000000015e6      0x1e0 ../cronometro_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .debug_abbrev  0x00000000000017c6      0x116 ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_abbrev  0x00000000000018dc      0x1e5 ../cronometro_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_abbrev  0x0000000000000012      0x2fa obj/default/hello_world_small.o
+ .debug_abbrev  0x000000000000030c      0x103 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_abbrev  0x000000000000040f      0x31f ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_abbrev  0x000000000000072e      0x303 ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_abbrev  0x0000000000000a31       0x12 ../cronometro_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x0000000000000a43      0x283 ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x0000000000000cc6       0x44 ../cronometro_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x0000000000000d0a      0x277 ../cronometro_bsp//libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x0000000000000f81      0x252 ../cronometro_bsp//libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x00000000000011d3      0x25f ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x0000000000001432      0x1e0 ../cronometro_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x0000000000001612       0x12 ../cronometro_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x0000000000001624      0x1e0 ../cronometro_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x0000000000001804      0x116 ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_abbrev  0x000000000000191a      0x1e5 ../cronometro_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_line     0x0000000000000000     0x1bc3
+.debug_line     0x0000000000000000     0x1c91
  *(.debug_line)
  .debug_line    0x0000000000000000       0x66 ../cronometro_bsp//obj/HAL/src/crt0.o
- .debug_line    0x0000000000000066      0x2a5 obj/default/hello_world_small.o
- .debug_line    0x000000000000030b      0x2f9 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
- .debug_line    0x0000000000000604      0x297 ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
- .debug_line    0x000000000000089b      0x251 ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .debug_line    0x0000000000000aec       0x6b ../cronometro_bsp//libhal_bsp.a(alt_irq_entry.o)
- .debug_line    0x0000000000000b57      0x21f ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_line    0x0000000000000d76       0x50 ../cronometro_bsp//libhal_bsp.a(alt_irq_vars.o)
- .debug_line    0x0000000000000dc6      0x285 ../cronometro_bsp//libhal_bsp.a(alt_load.o)
- .debug_line    0x000000000000104b      0x341 ../cronometro_bsp//libhal_bsp.a(alt_main.o)
- .debug_line    0x000000000000138c      0x1f0 ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
- .debug_line    0x000000000000157c      0x1a9 ../cronometro_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_line    0x0000000000001725       0xb3 ../cronometro_bsp//libhal_bsp.a(alt_exception_entry.o)
- .debug_line    0x00000000000017d8      0x1a7 ../cronometro_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .debug_line    0x000000000000197f       0xee ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_line    0x0000000000001a6d      0x156 ../cronometro_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x0000000000000066      0x373 obj/default/hello_world_small.o
+ .debug_line    0x00000000000003d9      0x2f9 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_line    0x00000000000006d2      0x297 ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_line    0x0000000000000969      0x251 ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x0000000000000bba       0x6b ../cronometro_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x0000000000000c25      0x21f ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x0000000000000e44       0x50 ../cronometro_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x0000000000000e94      0x285 ../cronometro_bsp//libhal_bsp.a(alt_load.o)
+ .debug_line    0x0000000000001119      0x341 ../cronometro_bsp//libhal_bsp.a(alt_main.o)
+ .debug_line    0x000000000000145a      0x1f0 ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x000000000000164a      0x1a9 ../cronometro_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x00000000000017f3       0xb3 ../cronometro_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x00000000000018a6      0x1a7 ../cronometro_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000000000001a4d       0xee ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_line    0x0000000000001b3b      0x156 ../cronometro_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_frame    0x0000000000000000      0x280
+.debug_frame    0x0000000000000000      0x2c8
  *(.debug_frame)
- .debug_frame   0x0000000000000000       0x4c obj/default/hello_world_small.o
- .debug_frame   0x000000000000004c       0x50 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
- .debug_frame   0x000000000000009c       0x50 ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
- .debug_frame   0x00000000000000ec       0x38 ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .debug_frame   0x0000000000000124       0x34 ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_frame   0x0000000000000158       0x30 ../cronometro_bsp//libhal_bsp.a(alt_load.o)
- .debug_frame   0x0000000000000188       0x2c ../cronometro_bsp//libhal_bsp.a(alt_main.o)
- .debug_frame   0x00000000000001b4       0x3c ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
- .debug_frame   0x00000000000001f0       0x20 ../cronometro_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_frame   0x0000000000000210       0x20 ../cronometro_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .debug_frame   0x0000000000000230       0x30 ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_frame   0x0000000000000260       0x20 ../cronometro_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_frame   0x0000000000000000       0x94 obj/default/hello_world_small.o
+ .debug_frame   0x0000000000000094       0x50 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_frame   0x00000000000000e4       0x50 ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_frame   0x0000000000000134       0x38 ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_frame   0x000000000000016c       0x34 ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x00000000000001a0       0x30 ../cronometro_bsp//libhal_bsp.a(alt_load.o)
+ .debug_frame   0x00000000000001d0       0x2c ../cronometro_bsp//libhal_bsp.a(alt_main.o)
+ .debug_frame   0x00000000000001fc       0x3c ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x0000000000000238       0x20 ../cronometro_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x0000000000000258       0x20 ../cronometro_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x0000000000000278       0x30 ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_frame   0x00000000000002a8       0x20 ../cronometro_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_str      0x0000000000000000     0x11d7
+.debug_str      0x0000000000000000     0x11f6
  *(.debug_str)
  .debug_str     0x0000000000000000       0x55 ../cronometro_bsp//obj/HAL/src/crt0.o
- .debug_str     0x0000000000000055      0x55a obj/default/hello_world_small.o
-                                        0x5f0 (size before relaxing)
- .debug_str     0x00000000000005af      0x194 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_str     0x0000000000000055      0x579 obj/default/hello_world_small.o
+                                        0x60f (size before relaxing)
+ .debug_str     0x00000000000005ce      0x194 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
                                         0x1df (size before relaxing)
- .debug_str     0x0000000000000743       0xf2 ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_str     0x0000000000000762       0xf2 ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
                                         0x634 (size before relaxing)
- .debug_str     0x0000000000000835       0x37 ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_str     0x0000000000000854       0x37 ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
                                         0x600 (size before relaxing)
- .debug_str     0x000000000000086c       0x18 ../cronometro_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_str     0x000000000000088b       0x18 ../cronometro_bsp//libhal_bsp.a(alt_irq_entry.o)
                                          0x5e (size before relaxing)
- .debug_str     0x0000000000000884       0x3a ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_str     0x00000000000008a3       0x3a ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
                                         0x58a (size before relaxing)
- .debug_str     0x00000000000008be       0x29 ../cronometro_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_str     0x00000000000008dd       0x29 ../cronometro_bsp//libhal_bsp.a(alt_irq_vars.o)
                                         0x140 (size before relaxing)
- .debug_str     0x00000000000008e7      0x11d ../cronometro_bsp//libhal_bsp.a(alt_load.o)
+ .debug_str     0x0000000000000906      0x11d ../cronometro_bsp//libhal_bsp.a(alt_load.o)
                                         0x622 (size before relaxing)
- .debug_str     0x0000000000000a04      0x23d ../cronometro_bsp//libhal_bsp.a(alt_main.o)
+ .debug_str     0x0000000000000a23      0x23d ../cronometro_bsp//libhal_bsp.a(alt_main.o)
                                         0x7d4 (size before relaxing)
- .debug_str     0x0000000000000c41       0x8f ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_str     0x0000000000000c60       0x8f ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
                                         0x5ca (size before relaxing)
- .debug_str     0x0000000000000cd0       0x1f ../cronometro_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_str     0x0000000000000cef       0x1f ../cronometro_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
                                         0x53b (size before relaxing)
- .debug_str     0x0000000000000cef       0x1e ../cronometro_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_str     0x0000000000000d0e       0x1e ../cronometro_bsp//libhal_bsp.a(alt_exception_entry.o)
                                          0x64 (size before relaxing)
- .debug_str     0x0000000000000d0d       0x1f ../cronometro_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_str     0x0000000000000d2c       0x1f ../cronometro_bsp//libhal_bsp.a(alt_icache_flush_all.o)
                                         0x53b (size before relaxing)
- .debug_str     0x0000000000000d2c      0x48b ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_str     0x0000000000000d4b      0x48b ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
                                         0x5a6 (size before relaxing)
- .debug_str     0x00000000000011b7       0x20 ../cronometro_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_str     0x00000000000011d6       0x20 ../cronometro_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
                                         0x54f (size before relaxing)
 
-.debug_loc      0x0000000000000000      0xcd1
+.debug_loc      0x0000000000000000      0xefd
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0x116 obj/default/hello_world_small.o
- .debug_loc     0x0000000000000116      0x5d0 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
- .debug_loc     0x00000000000006e6      0x205 ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
- .debug_loc     0x00000000000008eb      0x23c ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
- .debug_loc     0x0000000000000b27       0xac ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_loc     0x0000000000000bd3       0x66 ../cronometro_bsp//libhal_bsp.a(alt_load.o)
- .debug_loc     0x0000000000000c39       0x25 ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
- .debug_loc     0x0000000000000c5e       0x73 ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_loc     0x0000000000000000      0x342 obj/default/hello_world_small.o
+ .debug_loc     0x0000000000000342      0x5d0 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_loc     0x0000000000000912      0x205 ../cronometro_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_loc     0x0000000000000b17      0x23c ../cronometro_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_loc     0x0000000000000d53       0xac ../cronometro_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_loc     0x0000000000000dff       0x66 ../cronometro_bsp//libhal_bsp.a(alt_load.o)
+ .debug_loc     0x0000000000000e65       0x25 ../cronometro_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x0000000000000e8a       0x73 ../cronometro_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
 
 .debug_macinfo
  *(.debug_macinfo)
