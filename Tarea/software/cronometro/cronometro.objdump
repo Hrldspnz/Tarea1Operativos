@@ -35,41 +35,41 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   9 .debug_aranges 00000238  00000000  00000000  00002040  2**3
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_info   000073d9  00000000  00000000  00002278  2**0
+ 10 .debug_info   000073ee  00000000  00000000  00002278  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_abbrev 00001adf  00000000  00000000  00009651  2**0
+ 11 .debug_abbrev 00001adf  00000000  00000000  00009666  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_line   00001cbe  00000000  00000000  0000b130  2**0
+ 12 .debug_line   00001cc8  00000000  00000000  0000b145  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_frame  000002c8  00000000  00000000  0000cdf0  2**2
+ 13 .debug_frame  000002c8  00000000  00000000  0000ce10  2**2
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_str    000011f1  00000000  00000000  0000d0b8  2**0
+ 14 .debug_str    000011f6  00000000  00000000  0000d0d8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_loc    00000f41  00000000  00000000  0000e2a9  2**0
+ 15 .debug_loc    00000f73  00000000  00000000  0000e2ce  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_alt_sim_info 00000010  00000000  00000000  0000f1ec  2**2
+ 16 .debug_alt_sim_info 00000010  00000000  00000000  0000f244  2**2
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_ranges 000001f8  00000000  00000000  0000f200  2**3
+ 17 .debug_ranges 000001f8  00000000  00000000  0000f258  2**3
                   CONTENTS, READONLY, DEBUGGING
- 18 .thread_model 00000003  00000000  00000000  0001051d  2**0
+ 18 .thread_model 00000003  00000000  00000000  00010575  2**0
                   CONTENTS, READONLY
- 19 .cpu          00000003  00000000  00000000  00010520  2**0
+ 19 .cpu          00000003  00000000  00000000  00010578  2**0
                   CONTENTS, READONLY
- 20 .qsys         00000001  00000000  00000000  00010523  2**0
+ 20 .qsys         00000001  00000000  00000000  0001057b  2**0
                   CONTENTS, READONLY
- 21 .simulation_enabled 00000001  00000000  00000000  00010524  2**0
+ 21 .simulation_enabled 00000001  00000000  00000000  0001057c  2**0
                   CONTENTS, READONLY
- 22 .stderr_dev   00000004  00000000  00000000  00010525  2**0
+ 22 .stderr_dev   00000004  00000000  00000000  0001057d  2**0
                   CONTENTS, READONLY
- 23 .stdin_dev    00000004  00000000  00000000  00010529  2**0
+ 23 .stdin_dev    00000004  00000000  00000000  00010581  2**0
                   CONTENTS, READONLY
- 24 .stdout_dev   00000004  00000000  00000000  0001052d  2**0
+ 24 .stdout_dev   00000004  00000000  00000000  00010585  2**0
                   CONTENTS, READONLY
- 25 .sopc_system_name 00000008  00000000  00000000  00010531  2**0
+ 25 .sopc_system_name 00000008  00000000  00000000  00010589  2**0
                   CONTENTS, READONLY
- 26 .quartus_project_dir 0000001e  00000000  00000000  00010539  2**0
+ 26 .quartus_project_dir 0000001e  00000000  00000000  00010591  2**0
                   CONTENTS, READONLY
- 27 .sopcinfo     0006cec2  00000000  00000000  00010557  2**0
+ 27 .sopcinfo     0006cec2  00000000  00000000  000105af  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00000000 l    d  .entry	00000000 .entry
@@ -773,8 +773,15 @@ int main()
  3d0:	00c00234 	movhi	r3,8
  3d4:	18c00037 	ldwio	r3,0(r3)
 
-	if(init==0){
+	unsigned onof=0;
+
+	if (init==0){
  3d8:	1800091e 	bne	r3,zero,400 <main+0x40>
+			onof=0;
+		}
+	}
+
+	if(onof==1){
 		if (modo == 2){
  3dc:	10c00098 	cmpnei	r3,r2,2
  3e0:	18000f1e 	bne	r3,zero,420 <main+0x60>

@@ -390,7 +390,17 @@ int main()
 
 	unsigned init = IORD_ALTERA_AVALON_PIO_DATA(SWITCHS_BASE);
 
-	if(init==0){
+	unsigned onof=0;
+
+	if (init==0){
+		if (onof==0){
+			onof=1;
+		}else{
+			onof=0;
+		}
+	}
+
+	if(onof==1){
 		if (modo == 2){
 				alt_ic_isr_register(
 						TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
