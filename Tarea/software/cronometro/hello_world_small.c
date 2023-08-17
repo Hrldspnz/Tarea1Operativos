@@ -392,24 +392,24 @@ int main()
 
 	unsigned onof=0;
 
-	if (init==0){
-		if (onof==0){
-			onof=1;
-		}else{
-			onof=0;
-		}
-	}
+	//if (init==0){
+		//if (onof==0){
+		//	onof=1;
+		//}else{
+		//	onof=0;
+		//}
+	//}
 
-	if(onof==1){
+	//if(onof==1){
 		if (modo == 2){
 				alt_ic_isr_register(
 						TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
 						  );
-			}if(modo == 1){
+		}if(modo == 1){
 				alt_ic_isr_register(
 						TIMER_MS_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MS_IRQ,timer_ms_inter,NULL,NULL
 						  );
-			}if(modo ==3){
+		}if(modo ==3){
 
 				alt_ic_isr_register(
 						TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
@@ -423,7 +423,7 @@ int main()
 						TIMER_MIN_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MIN_IRQ,timer_min_inter,NULL,NULL
 						  );
 			}
-	}
+	//}
 
 	IOWR_ALTERA_AVALON_TIMER_CONTROL(
 			TIMER_S_BASE,ALTERA_AVALON_TIMER_CONTROL_ITO_MSK | ALTERA_AVALON_TIMER_CONTROL_CONT_MSK);
@@ -433,6 +433,7 @@ int main()
 
 	IOWR_ALTERA_AVALON_TIMER_CONTROL(
 			TIMER_MIN_BASE,ALTERA_AVALON_TIMER_CONTROL_ITO_MSK | ALTERA_AVALON_TIMER_CONTROL_CONT_MSK);
+
 
 
 
