@@ -148,6 +148,7 @@ static void timer_s_inter(void *context)
 // Funcion encargada del manejo de interrupciones del timer de los milisegundos
 static void timer_ms_inter(void *context)
 {
+
 	(void) context;
 	cont_mseg ++;
 	if (cont_mseg > 60){
@@ -181,8 +182,6 @@ static void timer_ms_inter(void *context)
 	else if (digito2 == 7){Output2 = 15;}
 	else if (digito2 == 8){Output2 = 0;}
 	else if (digito2 == 9){Output2 = 4;}else{Output2 = 127;}
-
-
 
 	// salida de los displays
 	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_5_BASE,Output2);
