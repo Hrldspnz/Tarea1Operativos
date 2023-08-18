@@ -95,6 +95,7 @@
 static int cont_seg=0;
 static int cont_mseg=0;
 static int cont_min=0;
+static int fijo = 6;
 
 
 // Funcion encargada del manejo de interrupciones del timer de los segundos
@@ -184,7 +185,7 @@ static void timer_s_inter(void *context)
 					break;
 	    }
 	// salida de los displays
-	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_3_BASE,Output2);
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_3_BASE,fijo);
 	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_4_BASE,Output1);
 
 	//fin de la interrupcion
