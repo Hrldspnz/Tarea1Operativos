@@ -108,7 +108,7 @@ static void timer_s_inter(void *context)
 	}
 
 	int digito1 = cont_seg%10;
-	int digito2 = floor(10/cont_seg);
+	int digito2 = (int)((cont_seg - (int)cont_seg % 10)/10);
 	unsigned Output1 = 0;
 	unsigned Output2 = 0;
 
@@ -122,7 +122,7 @@ static void timer_s_inter(void *context)
 	else if (digito1 == 6){Output1 = 32;}
 	else if (digito1 == 7){Output1 = 15;}
 	else if (digito1 == 8){Output1 = 0;}
-	else if (digito1 == 9){Output1 = 4;}else{Output2 = 127;}
+	else if (digito1 == 9){Output1 = 4;}else{Output1 = 127;}
 
 	if (digito2 == 0){Output2 = 1;}
 	else if (digito2 == 1){Output2 = 79;}
@@ -135,41 +135,7 @@ static void timer_s_inter(void *context)
 	else if (digito2 == 8){Output2 = 0;}
 	else if (digito2 == 9){Output2 = 4;}else{Output2 = 127;}
 
-	/*switch (digito2) {
-	        case 0:
-	            Output2 = 1;
-	            break;
-	        case 1:
-	            Output2 = 79;
-	            break;
-	        case 2:
-	            Output2 = 18;
-	            break;
-			case 3:
-					Output2 = 6;
-					break;
-			case 4:
-					Output2 = 76;
-					break;
-			case 5:
-					Output2 = 36;
-					break;
-			case 6:
-					Output2 = 32;
-					break;
-			case 7:
-					Output2 = 15;
-					break;
-			case 8:
-					Output2 = 0;
-					break;
-			case 9:
-					Output2 = 4;
-					break;
-			default:
-					Output2 = 1;
-					break;
-	    }*/
+
 	// salida de los displays
 	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_3_BASE,Output2);
 	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_4_BASE,Output1);
@@ -189,7 +155,7 @@ static void timer_ms_inter(void *context)
 	}
 
 	int digito1 = cont_mseg%10;
-	int digito2 = floor(10/cont_mseg);
+	int digito2 = (int)((cont_mseg - (int)cont_mseg % 10)/10);
 	unsigned Output1 = 0;
 	unsigned Output2 = 0;
 
@@ -203,7 +169,7 @@ static void timer_ms_inter(void *context)
 	else if (digito1 == 6){Output1 = 32;}
 	else if (digito1 == 7){Output1 = 15;}
 	else if (digito1 == 8){Output1 = 0;}
-	else if (digito1 == 9){Output1 = 4;}else{Output2 = 127;}
+	else if (digito1 == 9){Output1 = 4;}else{Output1 = 127;}
 
 	if (digito2 == 0){Output2 = 1;}
 	else if (digito2 == 1){Output2 = 79;}
@@ -237,7 +203,7 @@ static void timer_min_inter(void *context)
 	}
 
 	int digito1 = cont_min%10;
-	int digito2 = floor(10/cont_min);
+	int digito2 = (int)((cont_min - (int)cont_min % 10)/10);
 	unsigned Output1 = 0;
 	unsigned Output2 = 0;
 
@@ -305,19 +271,17 @@ int main()
 					TIMER_MIN_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MIN_IRQ,timer_min_inter,NULL,NULL
 			  	  	  );*/
 		if (modo == 0){
-					alt_ic_isr_register(
-							TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
-							  );
 
-		}if (modo == 2){
+
+		}else if (modo == 2){
 				alt_ic_isr_register(
 						TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
 						  );
-		}if(modo == 1){
+		}else if(modo == 1){
 				alt_ic_isr_register(
 						TIMER_MS_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MS_IRQ,timer_ms_inter,NULL,NULL
 						  );
-		}if(modo ==3){
+		}else if(modo ==3){
 
 				alt_ic_isr_register(
 						TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
