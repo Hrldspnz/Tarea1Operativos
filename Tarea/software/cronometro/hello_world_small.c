@@ -266,7 +266,9 @@ int main()
 							TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
 							  );
 
-					alt_irq_register(BUTTON_IRQ, NULL, play_btn);
+					alt_ic_isr_register(
+							BUTTON_IRQ_INTERRUPT_CONTROLLER_ID,BUTTON_IRQ,play_btn,NULL,NULL
+							  );
 
 
 
