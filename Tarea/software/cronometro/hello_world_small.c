@@ -108,7 +108,7 @@ static void timer_s_inter(void *context)
 	}
 
 	int digito1 = cont_seg; //cont_seg%10;
-	int digito2 = floor(10/cont_seg);
+	int digito2 = cont_seg;//floor(10/cont_seg);
 	unsigned Output1 = 0;
 	unsigned Output2 = 0;
 
