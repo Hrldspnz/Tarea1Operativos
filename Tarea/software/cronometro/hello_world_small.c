@@ -102,9 +102,13 @@ unsigned init = 0;
 static void play_btn(void *context)
 {
 	(void) context;
-	if (init==0){init=1;}else{init=0;}
+	//if (init==0){init=1;}else{init=0;}
 
-	IOWR_ALTERA_AVALON_TIMER_STATUS(BUTTON_BASE,0);
+	unsigned Output2 = 127;
+
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_5_BASE,Output2);
+
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_BASE, 0x0);
 }
 
 
@@ -256,30 +260,43 @@ int main()
 	unsigned modo = IORD_ALTERA_AVALON_PIO_DATA(SWITCHS_BASE);
 
 
+			if (modo == 2){
 
-	unsigned onof=0;
+					alt_ic_isr_register(
+							TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
+							  );
 
-	//if (init==0){
-		//if (onof==0){
-		//	onof=1;
-		//}else{
-		//	onof=0;
-		//}
-	//}
+					alt_irq_register(BUTTON_IRQ, NULL, play_btn);
 
-	//if(onof==1){
 
-	/*alt_ic_isr_register(
-					TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
+
+			}else if(modo == 1){
+
+					alt_ic_isr_register(
+						TIMER_MS_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MS_IRQ,timer_ms_inter,NULL,NULL
 						  );
-	alt_ic_isr_register(
-					TIMER_MS_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MS_IRQ,timer_ms_inter,NULL,NULL
-					  );
 
-	alt_ic_isr_register(
-					TIMER_MIN_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MIN_IRQ,timer_min_inter,NULL,NULL
-			  	  	  );*/
-		if (modo == 2){
+			}else if(modo ==3){
+
+					alt_ic_isr_register(
+							TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
+							  );
+
+					alt_ic_isr_register(
+							TIMER_MS_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MS_IRQ,timer_ms_inter,NULL,NULL
+							  );
+
+					alt_ic_isr_register(
+							TIMER_MIN_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MIN_IRQ,timer_min_inter,NULL,NULL
+							  );
+
+
+			}
+
+
+
+
+		/*if (modo == 2){
 				alt_ic_isr_register(
 						BUTTON_IRQ_INTERRUPT_CONTROLLER_ID,BUTTON_IRQ,play_btn,NULL,NULL
 						  );
@@ -316,7 +333,7 @@ int main()
 						  );
 			}
 
-		}
+		}*/
 	//}
 
 	IOWR_ALTERA_AVALON_TIMER_CONTROL(
