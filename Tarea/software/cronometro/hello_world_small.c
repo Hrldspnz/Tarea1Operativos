@@ -92,9 +92,9 @@
 
 
 // contadores para los milisegundos, segundos, minutos
-static cont_seg=0;
-static cont_mseg=0;
-static cont_min=0;
+static int cont_seg=0;
+static int cont_mseg=0;
+static int cont_min=0;
 
 
 // Funcion encargada del manejo de interrupciones del timer de los segundos
