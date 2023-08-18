@@ -165,12 +165,13 @@ static void timer_ms_inter(void *context)
 
 	(void) context;
 	cont_mseg ++;
-	if (cont_mseg > 59){
+	if (cont_mseg > 999){
 		cont_mseg = 0;
 	}
 
-	int digito1 = cont_mseg%10;
-	int digito2 = (int)((cont_mseg - (int)cont_mseg % 10)/10);
+
+    int digito1 = (int)((cont_mseg - (int)cont_mseg % 10)/10)%10;
+    int digito2 = (int)(((cont_mseg - (int)cont_mseg % 10)/10)-digito1)/10;
 	unsigned Output1 = 0;
 	unsigned Output2 = 0;
 
@@ -198,8 +199,8 @@ static void timer_ms_inter(void *context)
 	else if (digito2 == 9){Output2 = 4;}else{Output2 = 127;}
 
 	// salida de los displays
-	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_1_BASE,Output2);
-	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_2_BASE,Output1);
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_5_BASE,Output2);
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_6_BASE,Output1);
 
 	//fin de la interrupcion
 	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_MS_BASE,0);
@@ -245,8 +246,8 @@ static void timer_min_inter(void *context)
 
 
 	// salida de los displays
-	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_5_BASE,Output2);
-	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_6_BASE,Output1);
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_1_BASE,Output2);
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_2_BASE,Output1);
 
 	//fin de la interrupcion
 	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_MIN_BASE,0);
