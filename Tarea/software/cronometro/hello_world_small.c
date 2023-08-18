@@ -95,7 +95,15 @@
 static int cont_seg=0;
 static int cont_mseg=0;
 static int cont_min=0;
+unsigned init = 0;
 //static int fijo = 6;
+
+
+static void play_btn(void *context)
+{
+	(void) context;
+	if (init==0){init=1;}else{init=0;}
+}
 
 
 // Funcion encargada del manejo de interrupciones del timer de los segundos
@@ -103,7 +111,7 @@ static void timer_s_inter(void *context)
 {
 	(void) context;
 	cont_seg ++;
-	if (cont_seg > 60){
+	if (cont_seg > 59){
 		cont_seg = 0;
 	}
 
@@ -151,7 +159,7 @@ static void timer_ms_inter(void *context)
 
 	(void) context;
 	cont_mseg ++;
-	if (cont_mseg > 60){
+	if (cont_mseg > 59){
 		cont_mseg = 0;
 	}
 
@@ -184,8 +192,8 @@ static void timer_ms_inter(void *context)
 	else if (digito2 == 9){Output2 = 4;}else{Output2 = 127;}
 
 	// salida de los displays
-	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_5_BASE,Output2);
-	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_6_BASE,Output1);
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_1_BASE,Output2);
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_2_BASE,Output1);
 
 	//fin de la interrupcion
 	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_MS_BASE,0);
@@ -197,7 +205,7 @@ static void timer_min_inter(void *context)
 {
 	(void) context;
 	cont_min ++;
-	if (cont_min > 60){
+	if (cont_min > 59){
 		cont_min = 0;
 	}
 
@@ -231,8 +239,8 @@ static void timer_min_inter(void *context)
 
 
 	// salida de los displays
-	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_1_BASE,Output2);
-	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_2_BASE,Output1);
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_5_BASE,Output2);
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_6_BASE,Output1);
 
 	//fin de la interrupcion
 	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_MIN_BASE,0);
@@ -245,7 +253,7 @@ int main()
 { 
 	unsigned modo = IORD_ALTERA_AVALON_PIO_DATA(SWITCHS_BASE);
 
-	unsigned init = IORD_ALTERA_AVALON_PIO_DATA(SWITCHS_BASE);
+
 
 	unsigned onof=0;
 
@@ -269,19 +277,30 @@ int main()
 	alt_ic_isr_register(
 					TIMER_MIN_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MIN_IRQ,timer_min_inter,NULL,NULL
 			  	  	  );*/
-		if (modo == 0){
-
-
-		}else if (modo == 2){
+		if (modo == 2){
 				alt_ic_isr_register(
-						TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
+						BUTTON_IRQ_INTERRUPT_CONTROLLER_ID,BUTTON_IRQ,play_btn,NULL,NULL
 						  );
+				if(init==1){
+					alt_ic_isr_register(
+							TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
+							  );
+				}
+
 		}else if(modo == 1){
-				alt_ic_isr_register(
-						TIMER_MS_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MS_IRQ,timer_ms_inter,NULL,NULL
+			alt_ic_isr_register(
+						BUTTON_IRQ_INTERRUPT_CONTROLLER_ID,BUTTON_IRQ,play_btn,NULL,NULL
 						  );
-		}else if(modo ==3){
+			if(init==1){
+				alt_ic_isr_register(
+					TIMER_MS_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MS_IRQ,timer_ms_inter,NULL,NULL
+					  );}
 
+		}else if(modo ==3){
+			alt_ic_isr_register(
+						BUTTON_IRQ_INTERRUPT_CONTROLLER_ID,BUTTON_IRQ,play_btn,NULL,NULL
+						  );
+			if(init==1){
 				alt_ic_isr_register(
 						TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
 						  );
@@ -294,6 +313,8 @@ int main()
 						TIMER_MIN_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MIN_IRQ,timer_min_inter,NULL,NULL
 						  );
 			}
+
+		}
 	//}
 
 	IOWR_ALTERA_AVALON_TIMER_CONTROL(
