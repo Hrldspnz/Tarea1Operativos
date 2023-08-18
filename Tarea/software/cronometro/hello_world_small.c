@@ -103,11 +103,11 @@ static void timer_s_inter(void *context)
 {
 	(void) context;
 	cont_seg ++;
-	if (cont_seg > 60){
+	if (cont_seg > 9){
 		cont_seg = 0;
 	}
 
-	int digito1 = cont_seg%10;
+	int digito1 = cont_seg //cont_seg%10;
 	int digito2 = floor(10/cont_seg);
 	unsigned Output1 = 0;
 	unsigned Output2 = 0;
@@ -144,7 +144,7 @@ static void timer_s_inter(void *context)
 					Output1 = 4;
 					break;
 			default:
-					Output1 = 1;
+					Output1 = 15;
 					break;
 	    }
 
