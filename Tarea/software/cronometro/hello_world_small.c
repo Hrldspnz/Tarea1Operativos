@@ -150,12 +150,15 @@ static void timer_s_inter(void *context)
 
 
 	if (digito2 == 0){Output2 = 1;}
-	if (digito2 == 1){Output2 = 79;}
-	if (digito2 == 2){Output2 = 18;}
-	if (digito2 == 3){Output2 = 6;}
-	if (digito2 == 4){Output2 = 76;}
-	if (digito2 == 5){Output2 = 36;}
-	if (digito2 == 6){Output2 = 32;}else{Output2 = 15;}
+	else if (digito2 == 1){Output2 = 79;}
+	else if (digito2 == 2){Output2 = 18;}
+	else if (digito2 == 3){Output2 = 6;}
+	else if (digito2 == 4){Output2 = 76;}
+	else if (digito2 == 5){Output2 = 36;}
+	else if (digito2 == 6){Output2 = 32;}
+	else if (digito2 == 7){Output2 = 15;}
+	else if (digito2 == 8){Output2 = 0;}
+	else if (digito2 == 9){Output2 = 4;}else{Output2 = 127;}
 
 	/*switch (digito2) {
 	        case 0:
