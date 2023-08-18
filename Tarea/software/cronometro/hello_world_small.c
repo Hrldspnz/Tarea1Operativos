@@ -95,7 +95,7 @@
 static int cont_seg=0;
 static int cont_mseg=0;
 static int cont_min=0;
-static int fijo = 6;
+//static int fijo = 6;
 
 
 // Funcion encargada del manejo de interrupciones del timer de los segundos
@@ -103,51 +103,26 @@ static void timer_s_inter(void *context)
 {
 	(void) context;
 	cont_seg ++;
-	if (cont_seg > 9){
+	if (cont_seg > 60){
 		cont_seg = 0;
 	}
 
-	int digito1 = cont_seg; //cont_seg%10;
-	int digito2 = cont_seg;//floor(10/cont_seg);
+	int digito1 = cont_seg%10;
+	int digito2 = floor(10/cont_seg);
 	unsigned Output1 = 0;
 	unsigned Output2 = 0;
 
-	switch (digito1) {
-	        case 0:
-	            Output1 = 1;
-	            break;
-	        case 1:
-	            Output1 = 79;
-	            break;
-	        case 2:
-	            Output1 = 18;
-	            break;
-			case 3:
-					Output1 = 6;
-					break;
-			case 4:
-					Output1 = 76;
-					break;
-			case 5:
-					Output1 = 36;
-					break;
-			case 6:
-					Output1 = 32;
-					break;
-			case 7:
-					Output1 = 15;
-					break;
-			case 8:
-					Output1 = 0;
-					break;
-			case 9:
-					Output1 = 4;
-					break;
-			default:
-					Output1 = 15;
-					break;
-	    }
 
+	if (digito1 == 0){Output1 = 1;}
+	else if (digito1 == 1){Output1 = 79;}
+	else if (digito1 == 2){Output1 = 18;}
+	else if (digito1 == 3){Output1 = 6;}
+	else if (digito1 == 4){Output1 = 76;}
+	else if (digito1 == 5){Output1 = 36;}
+	else if (digito1 == 6){Output1 = 32;}
+	else if (digito1 == 7){Output1 = 15;}
+	else if (digito1 == 8){Output1 = 0;}
+	else if (digito1 == 9){Output1 = 4;}else{Output2 = 127;}
 
 	if (digito2 == 0){Output2 = 1;}
 	else if (digito2 == 1){Output2 = 79;}
@@ -218,78 +193,31 @@ static void timer_ms_inter(void *context)
 	unsigned Output1 = 0;
 	unsigned Output2 = 0;
 
-	switch (digito1) {
-	        case 0:
-	            Output1 = 1;
-	            break;
-	        case 1:
-	            Output1 = 79;
-	            break;
-	        case 2:
-	            Output1 = 18;
-	            break;
-			case 3:
-					Output1 = 6;
-					break;
-			case 4:
-					Output1 = 76;
-					break;
-			case 5:
-					Output1 = 36;
-					break;
-			case 6:
-					Output1 = 32;
-					break;
-			case 7:
-					Output1 = 15;
-					break;
-			case 8:
-					Output1 = 0;
-					break;
-			case 9:
-					Output1 = 4;
-					break;
-			default:
-					Output1 = 1;
-					break;
-	    }
+
+	if (digito1 == 0){Output1 = 1;}
+	else if (digito1 == 1){Output1 = 79;}
+	else if (digito1 == 2){Output1 = 18;}
+	else if (digito1 == 3){Output1 = 6;}
+	else if (digito1 == 4){Output1 = 76;}
+	else if (digito1 == 5){Output1 = 36;}
+	else if (digito1 == 6){Output1 = 32;}
+	else if (digito1 == 7){Output1 = 15;}
+	else if (digito1 == 8){Output1 = 0;}
+	else if (digito1 == 9){Output1 = 4;}else{Output2 = 127;}
+
+	if (digito2 == 0){Output2 = 1;}
+	else if (digito2 == 1){Output2 = 79;}
+	else if (digito2 == 2){Output2 = 18;}
+	else if (digito2 == 3){Output2 = 6;}
+	else if (digito2 == 4){Output2 = 76;}
+	else if (digito2 == 5){Output2 = 36;}
+	else if (digito2 == 6){Output2 = 32;}
+	else if (digito2 == 7){Output2 = 15;}
+	else if (digito2 == 8){Output2 = 0;}
+	else if (digito2 == 9){Output2 = 4;}else{Output2 = 127;}
 
 
-	switch (digito2) {
-	        case 0:
-	            Output2 = 1;
-	            break;
-	        case 1:
-	            Output2 = 79;
-	            break;
-	        case 2:
-	            Output2 = 18;
-	            break;
-			case 3:
-					Output2 = 6;
-					break;
-			case 4:
-					Output2 = 76;
-					break;
-			case 5:
-					Output2 = 36;
-					break;
-			case 6:
-					Output2 = 32;
-					break;
-			case 7:
-					Output2 = 15;
-					break;
-			case 8:
-					Output2 = 0;
-					break;
-			case 9:
-					Output2 = 4;
-					break;
-			default:
-					Output2 = 1;
-					break;
-	    }
+
 	// salida de los displays
 	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_5_BASE,Output2);
 	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_6_BASE,Output1);
@@ -313,80 +241,32 @@ static void timer_min_inter(void *context)
 	unsigned Output1 = 0;
 	unsigned Output2 = 0;
 
-	switch (digito1) {
-	        case 0:
-	            Output1 = 1;
-	            break;
-	        case 1:
-	            Output1 = 79;
-	            break;
-	        case 2:
-	            Output1 = 18;
-	            break;
-			case 3:
-					Output1 = 6;
-					break;
-			case 4:
-					Output1 = 76;
-					break;
-			case 5:
-					Output1 = 36;
-					break;
-			case 6:
-					Output1 = 32;
-					break;
-			case 7:
-					Output1 = 15;
-					break;
-			case 8:
-					Output1 = 0;
-					break;
-			case 9:
-					Output1 = 4;
-					break;
-			default:
-					Output1 = 1;
-					break;
-	    }
+
+	if (digito1 == 0){Output1 = 1;}
+	else if (digito1 == 1){Output1 = 79;}
+	else if (digito1 == 2){Output1 = 18;}
+	else if (digito1 == 3){Output1 = 6;}
+	else if (digito1 == 4){Output1 = 76;}
+	else if (digito1 == 5){Output1 = 36;}
+	else if (digito1 == 6){Output1 = 32;}
+	else if (digito1 == 7){Output1 = 15;}
+	else if (digito1 == 8){Output1 = 0;}
+	else if (digito1 == 9){Output1 = 4;}else{Output2 = 127;}
+
+	if (digito2 == 0){Output2 = 1;}
+	else if (digito2 == 1){Output2 = 79;}
+	else if (digito2 == 2){Output2 = 18;}
+	else if (digito2 == 3){Output2 = 6;}
+	else if (digito2 == 4){Output2 = 76;}
+	else if (digito2 == 5){Output2 = 36;}
+	else if (digito2 == 6){Output2 = 32;}
+	else if (digito2 == 7){Output2 = 15;}
+	else if (digito2 == 8){Output2 = 0;}
+	else if (digito2 == 9){Output2 = 4;}else{Output2 = 127;}
 
 
-	switch (digito2) {
-	        case 0:
-	            Output2 = 1;
-	            break;
-	        case 1:
-	            Output2 = 79;
-	            break;
-	        case 2:
-	            Output2 = 18;
-	            break;
-			case 3:
-					Output2 = 6;
-					break;
-			case 4:
-					Output2 = 76;
-					break;
-			case 5:
-					Output2 = 36;
-					break;
-			case 6:
-					Output2 = 32;
-					break;
-			case 7:
-					Output2 = 15;
-					break;
-			case 8:
-					Output2 = 0;
-					break;
-			case 9:
-					Output2 = 4;
-					break;
-			default:
-					Output2 = 1;
-					break;
-	    }
 	// salida de los displays
-	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_1_BASE,fijo);
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_1_BASE,Output2);
 	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_2_BASE,Output1);
 
 	//fin de la interrupcion
@@ -414,7 +294,7 @@ int main()
 
 	//if(onof==1){
 
-	alt_ic_isr_register(
+	/*alt_ic_isr_register(
 					TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
 						  );
 	alt_ic_isr_register(
@@ -423,9 +303,13 @@ int main()
 
 	alt_ic_isr_register(
 					TIMER_MIN_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MIN_IRQ,timer_min_inter,NULL,NULL
-			  	  	  );
-	/*
-		if (modo == 2){
+			  	  	  );*/
+		if (modo == 0){
+					alt_ic_isr_register(
+							TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
+							  );
+
+		}if (modo == 2){
 				alt_ic_isr_register(
 						TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
 						  );
@@ -446,7 +330,7 @@ int main()
 				alt_ic_isr_register(
 						TIMER_MIN_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MIN_IRQ,timer_min_inter,NULL,NULL
 						  );
-			}*/
+			}
 	//}
 
 	IOWR_ALTERA_AVALON_TIMER_CONTROL(

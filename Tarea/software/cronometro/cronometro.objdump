@@ -9,9 +9,9 @@ Program Header:
     LOAD off    0x00001000 vaddr 0x00000000 paddr 0x00000000 align 2**12
          filesz 0x00000020 memsz 0x00000020 flags r-x
     LOAD off    0x00001020 vaddr 0x00000020 paddr 0x00000020 align 2**12
-         filesz 0x00000868 memsz 0x00000868 flags r-x
-    LOAD off    0x00002000 vaddr 0x00010000 paddr 0x00000888 align 2**12
-         filesz 0x00000018 memsz 0x00000138 flags rw-
+         filesz 0x00000b54 memsz 0x00000b54 flags r-x
+    LOAD off    0x00002000 vaddr 0x00010000 paddr 0x00000b74 align 2**12
+         filesz 0x00000004 memsz 0x00000124 flags rw-
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -19,67 +19,67 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   1 .exceptions   00000160  00000020  00000020  00001020  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .text         00000708  00000180  00000180  00001180  2**2
+  2 .text         000009f4  00000180  00000180  00001180  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  3 .rodata       00000014  00010000  00000888  00002000  2**0
-                  CONTENTS, ALLOC, LOAD, READONLY, DATA
-  4 .rwdata       00000004  00010014  0000089c  00002014  2**2
+  3 .rodata       00000000  00010000  00000b78  00002004  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .rwdata       00000004  00010000  00000b74  00002000  2**2
                   CONTENTS, ALLOC, LOAD, DATA, SMALL_DATA
-  5 .bss          00000120  00010018  000008a0  00002018  2**2
+  5 .bss          00000120  00010004  00000b78  00002004  2**2
                   ALLOC, SMALL_DATA
-  6 .ROM          00000000  000008a0  000008a0  00002018  2**0
+  6 .ROM          00000000  00000b78  00000b78  00002004  2**0
                   CONTENTS
-  7 .RAM          00000000  00010138  00010138  00002018  2**0
+  7 .RAM          00000000  00010124  00010124  00002004  2**0
                   CONTENTS
-  8 .comment      0000002c  00000000  00000000  00002018  2**0
+  8 .comment      0000002c  00000000  00000000  00002004  2**0
                   CONTENTS, READONLY
-  9 .debug_aranges 00000238  00000000  00000000  00002048  2**3
+  9 .debug_aranges 00000238  00000000  00000000  00002030  2**3
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_info   000073fc  00000000  00000000  00002280  2**0
+ 10 .debug_info   000073d9  00000000  00000000  00002268  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_abbrev 00001b28  00000000  00000000  0000967c  2**0
+ 11 .debug_abbrev 00001ad1  00000000  00000000  00009641  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_line   00001cc2  00000000  00000000  0000b1a4  2**0
+ 12 .debug_line   00001ee8  00000000  00000000  0000b112  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_frame  000002b0  00000000  00000000  0000ce68  2**2
+ 13 .debug_frame  000002c8  00000000  00000000  0000cffc  2**2
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_str    000011fb  00000000  00000000  0000d118  2**0
+ 14 .debug_str    000011f6  00000000  00000000  0000d2c4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_loc    00000edf  00000000  00000000  0000e313  2**0
+ 15 .debug_loc    0000101b  00000000  00000000  0000e4ba  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_alt_sim_info 00000010  00000000  00000000  0000f1f4  2**2
+ 16 .debug_alt_sim_info 00000010  00000000  00000000  0000f4d8  2**2
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_ranges 000001f8  00000000  00000000  0000f208  2**3
+ 17 .debug_ranges 000001f8  00000000  00000000  0000f4e8  2**3
                   CONTENTS, READONLY, DEBUGGING
- 18 .thread_model 00000003  00000000  00000000  000104f1  2**0
+ 18 .thread_model 00000003  00000000  00000000  00010769  2**0
                   CONTENTS, READONLY
- 19 .cpu          00000003  00000000  00000000  000104f4  2**0
+ 19 .cpu          00000003  00000000  00000000  0001076c  2**0
                   CONTENTS, READONLY
- 20 .qsys         00000001  00000000  00000000  000104f7  2**0
+ 20 .qsys         00000001  00000000  00000000  0001076f  2**0
                   CONTENTS, READONLY
- 21 .simulation_enabled 00000001  00000000  00000000  000104f8  2**0
+ 21 .simulation_enabled 00000001  00000000  00000000  00010770  2**0
                   CONTENTS, READONLY
- 22 .stderr_dev   00000004  00000000  00000000  000104f9  2**0
+ 22 .stderr_dev   00000004  00000000  00000000  00010771  2**0
                   CONTENTS, READONLY
- 23 .stdin_dev    00000004  00000000  00000000  000104fd  2**0
+ 23 .stdin_dev    00000004  00000000  00000000  00010775  2**0
                   CONTENTS, READONLY
- 24 .stdout_dev   00000004  00000000  00000000  00010501  2**0
+ 24 .stdout_dev   00000004  00000000  00000000  00010779  2**0
                   CONTENTS, READONLY
- 25 .sopc_system_name 00000008  00000000  00000000  00010505  2**0
+ 25 .sopc_system_name 00000008  00000000  00000000  0001077d  2**0
                   CONTENTS, READONLY
- 26 .quartus_project_dir 0000001e  00000000  00000000  0001050d  2**0
+ 26 .quartus_project_dir 0000001e  00000000  00000000  00010785  2**0
                   CONTENTS, READONLY
- 27 .sopcinfo     0006cec2  00000000  00000000  0001052b  2**0
+ 27 .sopcinfo     0006cec2  00000000  00000000  000107a3  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00000000 l    d  .entry	00000000 .entry
 00000020 l    d  .exceptions	00000000 .exceptions
 00000180 l    d  .text	00000000 .text
 00010000 l    d  .rodata	00000000 .rodata
-00010014 l    d  .rwdata	00000000 .rwdata
-00010018 l    d  .bss	00000000 .bss
-000008a0 l    d  .ROM	00000000 .ROM
-00010138 l    d  .RAM	00000000 .RAM
+00010000 l    d  .rwdata	00000000 .rwdata
+00010004 l    d  .bss	00000000 .bss
+00000b78 l    d  .ROM	00000000 .ROM
+00010124 l    d  .RAM	00000000 .RAM
 00000000 l    d  .comment	00000000 .comment
 00000000 l    d  .debug_aranges	00000000 .debug_aranges
 00000000 l    d  .debug_info	00000000 .debug_info
@@ -95,16 +95,12 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 alt_irq_handler.c
 00000000 l    df *ABS*	00000000 alt_instruction_exception_entry.c
 00000000 l    df *ABS*	00000000 hello_world_small.c
-000001bc l     F .text	00000078 timer_min_inter
-00010018 l     O .bss	00000004 cont_min
-0001000a l     O .rodata	00000009 CSWTCH.17
-00000234 l     F .text	000000ac timer_ms_inter
-0001001c l     O .bss	00000004 cont_mseg
-0001000a l     O .rodata	00000009 CSWTCH.19
-0001000a l     O .rodata	00000009 CSWTCH.20
-000002e0 l     F .text	000000f0 timer_s_inter
-00010020 l     O .bss	00000004 cont_seg
-00010000 l     O .rodata	0000000a CSWTCH.22
+000001bc l     F .text	00000190 timer_min_inter
+00010004 l     O .bss	00000004 cont_min
+0000034c l     F .text	00000190 timer_ms_inter
+00010008 l     O .bss	00000004 cont_mseg
+000004dc l     F .text	00000190 timer_s_inter
+0001000c l     O .bss	00000004 cont_seg
 00000000 l    df *ABS*	00000000 lib2-divmod.c
 00000000 l    df *ABS*	00000000 alt_iic.c
 00000000 l    df *ABS*	00000000 alt_iic_isr_register.c
@@ -115,58 +111,58 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 alt_dcache_flush_all.c
 00000000 l    df *ABS*	00000000 alt_icache_flush_all.c
 00000000 l    df *ABS*	00000000 altera_nios2_gen2_irq.c
-00010034 g     O .bss	00000004 alt_instruction_exception_handler
-000007b8 g     F .text	0000002c alt_main
-00010038 g     O .bss	00000100 alt_irq
-0000089c g       *ABS*	00000000 __flash_rwdata_start
-00000880 g     F .text	00000008 altera_nios2_gen2_irq_init
+00010020 g     O .bss	00000004 alt_instruction_exception_handler
+00000aa4 g     F .text	0000002c alt_main
+00010024 g     O .bss	00000100 alt_irq
+00000b74 g       *ABS*	00000000 __flash_rwdata_start
+00000b6c g     F .text	00000008 altera_nios2_gen2_irq_init
 00000000 g     F .entry	0000000c __reset
 00000020 g       *ABS*	00000000 __flash_exceptions_start
-0001002c g     O .bss	00000004 alt_argv
-00018014 g       *ABS*	00000000 _gp
-00000810 g     F .text	00000070 alt_exception_cause_generated_bad_addr
-00000550 g     F .text	00000064 .hidden __udivsi3
-00010138 g       *ABS*	00000000 __bss_end
-0000069c g     F .text	00000068 alt_iic_isr_register
+00010018 g     O .bss	00000004 alt_argv
+00018000 g       *ABS*	00000000 _gp
+00000afc g     F .text	00000070 alt_exception_cause_generated_bad_addr
+0000083c g     F .text	00000064 .hidden __udivsi3
+00010124 g       *ABS*	00000000 __bss_end
+00000988 g     F .text	00000068 alt_iic_isr_register
 00000000 g       *ABS*	00000000 __alt_mem_ROM
-00000684 g     F .text	00000018 alt_ic_irq_enabled
-00010024 g     O .bss	00000004 alt_irq_active
+00000970 g     F .text	00000018 alt_ic_irq_enabled
+00010010 g     O .bss	00000004 alt_irq_active
 000000fc g     F .exceptions	00000060 alt_irq_handler
-00000808 g     F .text	00000004 alt_dcache_flush_all
-00010018 g       *ABS*	00000000 __ram_rwdata_end
-00010014 g       *ABS*	00000000 __ram_rodata_end
-000005b4 g     F .text	0000005c .hidden __umodsi3
-00010138 g       *ABS*	00000000 end
+00000af4 g     F .text	00000004 alt_dcache_flush_all
+00010004 g       *ABS*	00000000 __ram_rwdata_end
+00010000 g       *ABS*	00000000 __ram_rodata_end
+000008a0 g     F .text	0000005c .hidden __umodsi3
+00010124 g       *ABS*	00000000 end
 0000015c g     F .exceptions	00000024 alt_instruction_exception_entry
 00011000 g       *ABS*	00000000 __alt_stack_pointer
 00000180 g     F .text	0000003c _start
-00000804 g     F .text	00000004 alt_sys_init
-00010014 g       *ABS*	00000000 __ram_rwdata_start
+00000af0 g     F .text	00000004 alt_sys_init
+00010000 g       *ABS*	00000000 __ram_rwdata_start
 00010000 g       *ABS*	00000000 __ram_rodata_start
-00010138 g       *ABS*	00000000 __alt_stack_base
-00010018 g       *ABS*	00000000 __bss_start
-000003d0 g     F .text	0000008c main
+00010124 g       *ABS*	00000000 __alt_stack_base
+00010004 g       *ABS*	00000000 __bss_start
+0000066c g     F .text	000000dc main
 00010000 g       *ABS*	00000000 __alt_mem_RAM
-00010028 g     O .bss	00000004 alt_envp
-0000045c g     F .text	00000080 .hidden __divsi3
-00000888 g       *ABS*	00000000 __flash_rodata_start
-000007e4 g     F .text	00000020 alt_irq_init
-00010030 g     O .bss	00000004 alt_argc
+00010014 g     O .bss	00000004 alt_envp
+00000748 g     F .text	00000080 .hidden __divsi3
+00000b74 g       *ABS*	00000000 __flash_rodata_start
+00000ad0 g     F .text	00000020 alt_irq_init
+0001001c g     O .bss	00000004 alt_argc
 00000020 g       .exceptions	00000000 alt_irq_entry
 00000020 g       *ABS*	00000000 __ram_exceptions_start
-00000610 g     F .text	00000004 alt_ic_isr_register
-00010018 g       *ABS*	00000000 _edata
-00010138 g       *ABS*	00000000 _end
+000008fc g     F .text	00000004 alt_ic_isr_register
+00010004 g       *ABS*	00000000 _edata
+00010124 g       *ABS*	00000000 _end
 00000180 g       *ABS*	00000000 __ram_exceptions_end
-0000064c g     F .text	00000038 alt_ic_irq_disable
-000004dc g     F .text	00000074 .hidden __modsi3
+00000938 g     F .text	00000038 alt_ic_irq_disable
+000007c8 g     F .text	00000074 .hidden __modsi3
 00011000 g       *ABS*	00000000 __alt_data_end
 00000020 g     F .exceptions	00000000 alt_exception
 0000000c g       .entry	00000000 _exit
-0000080c g     F .text	00000004 alt_icache_flush_all
-00010014 g     O .rwdata	00000004 alt_priority_mask
-00000614 g     F .text	00000038 alt_ic_irq_enable
-00000704 g     F .text	000000b4 alt_load
+00000af8 g     F .text	00000004 alt_icache_flush_all
+00010000 g     O .rwdata	00000004 alt_priority_mask
+00000900 g     F .text	00000038 alt_ic_irq_enable
+000009f0 g     F .text	000000b4 alt_load
 
 
 
@@ -403,7 +399,7 @@ static ALT_INLINE alt_u32 ALT_ALWAYS_INLINE alt_irq_pending (void)
 #ifdef ALT_ENHANCED_INTERRUPT_API_PRESENT
         alt_irq[i].handler(alt_irq[i].context); 
  10c:	04000074 	movhi	r16,1
- 110:	84000e04 	addi	r16,r16,56
+ 110:	84000904 	addi	r16,r16,36
     i = 0;
  114:	0005883a 	mov	r2,zero
     mask = 1;
@@ -494,7 +490,7 @@ Disassembly of section .text:
     movhi gp, %hi(_gp)
  188:	06800074 	movhi	gp,1
     ori gp, gp, %lo(_gp)
- 18c:	d6a00514 	ori	gp,gp,32788
+ 18c:	d6a00014 	ori	gp,gp,32768
  */
 #ifndef ALT_SIM_OPTIMIZE
     /* Log that the BSS is about to be cleared. */
@@ -503,12 +499,12 @@ Disassembly of section .text:
     movhi r2, %hi(__bss_start)
  190:	00800074 	movhi	r2,1
     ori r2, r2, %lo(__bss_start)
- 194:	10800614 	ori	r2,r2,24
+ 194:	10800114 	ori	r2,r2,4
 
     movhi r3, %hi(__bss_end)
  198:	00c00074 	movhi	r3,1
     ori r3, r3, %lo(__bss_end)
- 19c:	18c04e14 	ori	r3,r3,312
+ 19c:	18c04914 	ori	r3,r3,292
 
     beq r2, r3, 1f
  1a0:	10c00326 	beq	r2,r3,1b0 <_start+0x30>
@@ -526,14 +522,14 @@ Disassembly of section .text:
 #endif
 
     call alt_load
- 1b0:	00007040 	call	704 <alt_load>
+ 1b0:	00009f00 	call	9f0 <alt_load>
 
     /* Log that alt_main is about to be called. */
     ALT_LOG_PUTS(alt_log_msg_alt_main)
 
     /* Call the C entry point. It should never return. */
     call alt_main
- 1b4:	00007b80 	call	7b8 <alt_main>
+ 1b4:	0000aa40 	call	aa4 <alt_main>
 
 000001b8 <alt_after_alt_main>:
 
@@ -551,771 +547,1072 @@ static void timer_min_inter(void *context)
 	cont_min ++;
  1bc:	d0a00117 	ldw	r2,-32764(gp)
 {
- 1c0:	deffff04 	addi	sp,sp,-4
- 1c4:	dfc00015 	stw	ra,0(sp)
+ 1c0:	defffe04 	addi	sp,sp,-8
+ 1c4:	dfc00115 	stw	ra,4(sp)
 	cont_min ++;
  1c8:	10800044 	addi	r2,r2,1
+{
+ 1cc:	dc000015 	stw	r16,0(sp)
 	if (cont_min > 60){
- 1cc:	10c00f48 	cmpgei	r3,r2,61
- 1d0:	1800141e 	bne	r3,zero,224 <timer_min_inter+0x68>
+ 1d0:	10c00f48 	cmpgei	r3,r2,61
+ 1d4:	1800371e 	bne	r3,zero,2b4 <timer_min_inter+0xf8>
 	cont_min ++;
- 1d4:	d0a00115 	stw	r2,-32764(gp)
+ 1d8:	d0a00115 	stw	r2,-32764(gp)
 		cont_min = 0;
 	}
 
 	int digito1 = cont_min%10;
- 1d8:	d1200117 	ldw	r4,-32764(gp)
- 1dc:	01400284 	movi	r5,10
- 1e0:	00004dc0 	call	4dc <__modsi3>
- 1e4:	10bfffc4 	addi	r2,r2,-1
- 1e8:	10c00268 	cmpgeui	r3,r2,9
- 1ec:	18000f1e 	bne	r3,zero,22c <timer_min_inter+0x70>
- 1f0:	00c00074 	movhi	r3,1
- 1f4:	10c7883a 	add	r3,r2,r3
- 1f8:	18800283 	ldbu	r2,10(r3)
-			default:
-					Output2 = 1;
-					break;
-	    }
+ 1dc:	d1200117 	ldw	r4,-32764(gp)
+ 1e0:	01400284 	movi	r5,10
+ 1e4:	00007c80 	call	7c8 <__modsi3>
+	int digito2 = floor(10/cont_min);
+ 1e8:	d1600117 	ldw	r5,-32764(gp)
+	int digito1 = cont_min%10;
+ 1ec:	1021883a 	mov	r16,r2
+	int digito2 = floor(10/cont_min);
+ 1f0:	01000284 	movi	r4,10
+ 1f4:	00007480 	call	748 <__divsi3>
+	unsigned Output1 = 0;
+	unsigned Output2 = 0;
+
+
+	if (digito1 == 0){Output1 = 1;}
+ 1f8:	80003026 	beq	r16,zero,2bc <timer_min_inter+0x100>
+	else if (digito1 == 1){Output1 = 79;}
+ 1fc:	80c00060 	cmpeqi	r3,r16,1
+ 200:	1800301e 	bne	r3,zero,2c4 <timer_min_inter+0x108>
+	else if (digito1 == 2){Output1 = 18;}
+ 204:	80c000a0 	cmpeqi	r3,r16,2
+ 208:	1800301e 	bne	r3,zero,2cc <timer_min_inter+0x110>
+	else if (digito1 == 3){Output1 = 6;}
+ 20c:	80c000e0 	cmpeqi	r3,r16,3
+ 210:	1800301e 	bne	r3,zero,2d4 <timer_min_inter+0x118>
+	else if (digito1 == 4){Output1 = 76;}
+ 214:	80c00120 	cmpeqi	r3,r16,4
+ 218:	1800301e 	bne	r3,zero,2dc <timer_min_inter+0x120>
+	else if (digito1 == 5){Output1 = 36;}
+ 21c:	80c00160 	cmpeqi	r3,r16,5
+ 220:	1800301e 	bne	r3,zero,2e4 <timer_min_inter+0x128>
+	else if (digito1 == 6){Output1 = 32;}
+ 224:	80c001a0 	cmpeqi	r3,r16,6
+ 228:	1800301e 	bne	r3,zero,2ec <timer_min_inter+0x130>
+	else if (digito1 == 7){Output1 = 15;}
+ 22c:	80c001e0 	cmpeqi	r3,r16,7
+ 230:	1800301e 	bne	r3,zero,2f4 <timer_min_inter+0x138>
+	unsigned Output1 = 0;
+ 234:	80c00260 	cmpeqi	r3,r16,9
+ 238:	180690ba 	slli	r3,r3,2
+	else if (digito1 == 8){Output1 = 0;}
+	else if (digito1 == 9){Output1 = 4;}else{Output2 = 127;}
+
+	if (digito2 == 0){Output2 = 1;}
+ 23c:	10002f26 	beq	r2,zero,2fc <timer_min_inter+0x140>
+	else if (digito2 == 1){Output2 = 79;}
+ 240:	11000060 	cmpeqi	r4,r2,1
+ 244:	20002f1e 	bne	r4,zero,304 <timer_min_inter+0x148>
+	else if (digito2 == 2){Output2 = 18;}
+ 248:	110000a0 	cmpeqi	r4,r2,2
+ 24c:	20002f1e 	bne	r4,zero,30c <timer_min_inter+0x150>
+	else if (digito2 == 3){Output2 = 6;}
+ 250:	110000e0 	cmpeqi	r4,r2,3
+ 254:	20002f1e 	bne	r4,zero,314 <timer_min_inter+0x158>
+	else if (digito2 == 4){Output2 = 76;}
+ 258:	11000120 	cmpeqi	r4,r2,4
+ 25c:	20002f1e 	bne	r4,zero,31c <timer_min_inter+0x160>
+	else if (digito2 == 5){Output2 = 36;}
+ 260:	11000160 	cmpeqi	r4,r2,5
+ 264:	20002f1e 	bne	r4,zero,324 <timer_min_inter+0x168>
+	else if (digito2 == 6){Output2 = 32;}
+ 268:	110001a0 	cmpeqi	r4,r2,6
+ 26c:	20002f1e 	bne	r4,zero,32c <timer_min_inter+0x170>
+	else if (digito2 == 7){Output2 = 15;}
+ 270:	110001e0 	cmpeqi	r4,r2,7
+ 274:	20002f1e 	bne	r4,zero,334 <timer_min_inter+0x178>
+	else if (digito2 == 8){Output2 = 0;}
+ 278:	11000220 	cmpeqi	r4,r2,8
+ 27c:	20002f1e 	bne	r4,zero,33c <timer_min_inter+0x180>
+	else if (digito2 == 9){Output2 = 4;}else{Output2 = 127;}
+ 280:	10800260 	cmpeqi	r2,r2,9
+ 284:	10002f1e 	bne	r2,zero,344 <timer_min_inter+0x188>
+ 288:	00801fc4 	movi	r2,127
+
+
 	// salida de los displays
-	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_1_BASE,fijo);
- 1fc:	01000184 	movi	r4,6
- 200:	00c00134 	movhi	r3,4
- 204:	19000035 	stwio	r4,0(r3)
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_1_BASE,Output2);
+ 28c:	01000134 	movhi	r4,4
+ 290:	20800035 	stwio	r2,0(r4)
 	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_2_BASE,Output1);
- 208:	00c00174 	movhi	r3,5
- 20c:	18800035 	stwio	r2,0(r3)
+ 294:	00800174 	movhi	r2,5
+ 298:	10c00035 	stwio	r3,0(r2)
 
 	//fin de la interrupcion
 	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_MIN_BASE,0);
- 210:	00800434 	movhi	r2,16
- 214:	10000035 	stwio	zero,0(r2)
+ 29c:	00800434 	movhi	r2,16
+ 2a0:	10000035 	stwio	zero,0(r2)
 
 }
- 218:	dfc00017 	ldw	ra,0(sp)
- 21c:	dec00104 	addi	sp,sp,4
- 220:	f800283a 	ret
+ 2a4:	dfc00117 	ldw	ra,4(sp)
+ 2a8:	dc000017 	ldw	r16,0(sp)
+ 2ac:	dec00204 	addi	sp,sp,8
+ 2b0:	f800283a 	ret
 		cont_min = 0;
- 224:	d0200115 	stw	zero,-32764(gp)
- 228:	003feb06 	br	1d8 <timer_min_inter+0x1c>
-	switch (digito1) {
- 22c:	00800044 	movi	r2,1
- 230:	003ff206 	br	1fc <timer_min_inter+0x40>
-
-00000234 <timer_ms_inter>:
-	cont_mseg ++;
- 234:	d0a00217 	ldw	r2,-32760(gp)
-{
- 238:	defffe04 	addi	sp,sp,-8
- 23c:	dfc00115 	stw	ra,4(sp)
-	cont_mseg ++;
- 240:	10800044 	addi	r2,r2,1
-{
- 244:	dc000015 	stw	r16,0(sp)
-	if (cont_mseg > 60){
- 248:	10c00f48 	cmpgei	r3,r2,61
- 24c:	18001e1e 	bne	r3,zero,2c8 <timer_ms_inter+0x94>
-	cont_mseg ++;
- 250:	d0a00215 	stw	r2,-32760(gp)
-	int digito2 = floor(10/cont_mseg);
- 254:	d1600217 	ldw	r5,-32760(gp)
- 258:	01000284 	movi	r4,10
- 25c:	000045c0 	call	45c <__divsi3>
-	int digito1 = cont_mseg%10;
- 260:	d1200217 	ldw	r4,-32760(gp)
- 264:	01400284 	movi	r5,10
-	int digito2 = floor(10/cont_mseg);
- 268:	1021883a 	mov	r16,r2
-	int digito1 = cont_mseg%10;
- 26c:	00004dc0 	call	4dc <__modsi3>
- 270:	10bfffc4 	addi	r2,r2,-1
- 274:	10c00268 	cmpgeui	r3,r2,9
- 278:	1800151e 	bne	r3,zero,2d0 <timer_ms_inter+0x9c>
- 27c:	00c00074 	movhi	r3,1
- 280:	10c7883a 	add	r3,r2,r3
- 284:	19000283 	ldbu	r4,10(r3)
-	switch (digito2) {
- 288:	80bfffc4 	addi	r2,r16,-1
- 28c:	10c00268 	cmpgeui	r3,r2,9
- 290:	1800111e 	bne	r3,zero,2d8 <timer_ms_inter+0xa4>
- 294:	00c00074 	movhi	r3,1
- 298:	10c7883a 	add	r3,r2,r3
- 29c:	18800283 	ldbu	r2,10(r3)
-	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_5_BASE,Output2);
- 2a0:	00c00474 	movhi	r3,17
- 2a4:	18800035 	stwio	r2,0(r3)
-	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_6_BASE,Output1);
- 2a8:	008004b4 	movhi	r2,18
- 2ac:	11000035 	stwio	r4,0(r2)
-	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_MS_BASE,0);
- 2b0:	008000f4 	movhi	r2,3
- 2b4:	10000035 	stwio	zero,0(r2)
-}
- 2b8:	dfc00117 	ldw	ra,4(sp)
- 2bc:	dc000017 	ldw	r16,0(sp)
- 2c0:	dec00204 	addi	sp,sp,8
- 2c4:	f800283a 	ret
-		cont_mseg = 0;
- 2c8:	d0200215 	stw	zero,-32760(gp)
- 2cc:	003fe106 	br	254 <timer_ms_inter+0x20>
-	switch (digito1) {
- 2d0:	01000044 	movi	r4,1
- 2d4:	003fec06 	br	288 <timer_ms_inter+0x54>
-	switch (digito2) {
- 2d8:	00800044 	movi	r2,1
- 2dc:	003ff006 	br	2a0 <timer_ms_inter+0x6c>
-
-000002e0 <timer_s_inter>:
-	cont_seg ++;
- 2e0:	d0a00317 	ldw	r2,-32756(gp)
- 2e4:	10800044 	addi	r2,r2,1
-	if (cont_seg > 9){
- 2e8:	10c00288 	cmpgei	r3,r2,10
- 2ec:	1800241e 	bne	r3,zero,380 <timer_s_inter+0xa0>
-	cont_seg ++;
- 2f0:	d0a00315 	stw	r2,-32756(gp)
-	int digito1 = cont_seg; //cont_seg%10;
- 2f4:	d0a00317 	ldw	r2,-32756(gp)
-	switch (digito1) {
- 2f8:	10c002a8 	cmpgeui	r3,r2,10
- 2fc:	1800221e 	bne	r3,zero,388 <timer_s_inter+0xa8>
- 300:	00c00074 	movhi	r3,1
- 304:	10c7883a 	add	r3,r2,r3
- 308:	19400003 	ldbu	r5,0(r3)
+ 2b4:	d0200115 	stw	zero,-32764(gp)
+ 2b8:	003fc806 	br	1dc <timer_min_inter+0x20>
+	if (digito1 == 0){Output1 = 1;}
+ 2bc:	00c00044 	movi	r3,1
+ 2c0:	003fde06 	br	23c <timer_min_inter+0x80>
+	else if (digito1 == 1){Output1 = 79;}
+ 2c4:	00c013c4 	movi	r3,79
+ 2c8:	003fdc06 	br	23c <timer_min_inter+0x80>
+	else if (digito1 == 2){Output1 = 18;}
+ 2cc:	00c00484 	movi	r3,18
+ 2d0:	003fda06 	br	23c <timer_min_inter+0x80>
+	else if (digito1 == 3){Output1 = 6;}
+ 2d4:	00c00184 	movi	r3,6
+ 2d8:	003fd806 	br	23c <timer_min_inter+0x80>
+	else if (digito1 == 4){Output1 = 76;}
+ 2dc:	00c01304 	movi	r3,76
+ 2e0:	003fd606 	br	23c <timer_min_inter+0x80>
+	else if (digito1 == 5){Output1 = 36;}
+ 2e4:	00c00904 	movi	r3,36
+ 2e8:	003fd406 	br	23c <timer_min_inter+0x80>
+	else if (digito1 == 6){Output1 = 32;}
+ 2ec:	00c00804 	movi	r3,32
+ 2f0:	003fd206 	br	23c <timer_min_inter+0x80>
+	else if (digito1 == 7){Output1 = 15;}
+ 2f4:	00c003c4 	movi	r3,15
+ 2f8:	003fd006 	br	23c <timer_min_inter+0x80>
 	if (digito2 == 0){Output2 = 1;}
- 30c:	00c00044 	movi	r3,1
- 310:	10001426 	beq	r2,zero,364 <timer_s_inter+0x84>
+ 2fc:	00800044 	movi	r2,1
+ 300:	003fe206 	br	28c <timer_min_inter+0xd0>
 	else if (digito2 == 1){Output2 = 79;}
- 314:	11000060 	cmpeqi	r4,r2,1
- 318:	00c013c4 	movi	r3,79
- 31c:	2000111e 	bne	r4,zero,364 <timer_s_inter+0x84>
+ 304:	008013c4 	movi	r2,79
+ 308:	003fe006 	br	28c <timer_min_inter+0xd0>
 	else if (digito2 == 2){Output2 = 18;}
- 320:	10c000a0 	cmpeqi	r3,r2,2
- 324:	18001a1e 	bne	r3,zero,390 <timer_s_inter+0xb0>
+ 30c:	00800484 	movi	r2,18
+ 310:	003fde06 	br	28c <timer_min_inter+0xd0>
 	else if (digito2 == 3){Output2 = 6;}
- 328:	10c000e0 	cmpeqi	r3,r2,3
- 32c:	18001a1e 	bne	r3,zero,398 <timer_s_inter+0xb8>
+ 314:	00800184 	movi	r2,6
+ 318:	003fdc06 	br	28c <timer_min_inter+0xd0>
 	else if (digito2 == 4){Output2 = 76;}
- 330:	10c00120 	cmpeqi	r3,r2,4
- 334:	18001a1e 	bne	r3,zero,3a0 <timer_s_inter+0xc0>
+ 31c:	00801304 	movi	r2,76
+ 320:	003fda06 	br	28c <timer_min_inter+0xd0>
 	else if (digito2 == 5){Output2 = 36;}
- 338:	10c00160 	cmpeqi	r3,r2,5
- 33c:	18001a1e 	bne	r3,zero,3a8 <timer_s_inter+0xc8>
+ 324:	00800904 	movi	r2,36
+ 328:	003fd806 	br	28c <timer_min_inter+0xd0>
 	else if (digito2 == 6){Output2 = 32;}
- 340:	10c001a0 	cmpeqi	r3,r2,6
- 344:	18001a1e 	bne	r3,zero,3b0 <timer_s_inter+0xd0>
+ 32c:	00800804 	movi	r2,32
+ 330:	003fd606 	br	28c <timer_min_inter+0xd0>
 	else if (digito2 == 7){Output2 = 15;}
- 348:	10c001e0 	cmpeqi	r3,r2,7
- 34c:	18001a1e 	bne	r3,zero,3b8 <timer_s_inter+0xd8>
+ 334:	008003c4 	movi	r2,15
+ 338:	003fd406 	br	28c <timer_min_inter+0xd0>
 	else if (digito2 == 8){Output2 = 0;}
- 350:	10c00220 	cmpeqi	r3,r2,8
- 354:	18001a1e 	bne	r3,zero,3c0 <timer_s_inter+0xe0>
+ 33c:	0005883a 	mov	r2,zero
+ 340:	003fd206 	br	28c <timer_min_inter+0xd0>
 	else if (digito2 == 9){Output2 = 4;}else{Output2 = 127;}
- 358:	10800260 	cmpeqi	r2,r2,9
- 35c:	10001a1e 	bne	r2,zero,3c8 <timer_s_inter+0xe8>
- 360:	00c01fc4 	movi	r3,127
-	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_3_BASE,Output2);
- 364:	008001b4 	movhi	r2,6
- 368:	10c00035 	stwio	r3,0(r2)
-	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_4_BASE,Output1);
- 36c:	008001f4 	movhi	r2,7
- 370:	11400035 	stwio	r5,0(r2)
-	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_S_BASE,0);
- 374:	008000b4 	movhi	r2,2
- 378:	10000035 	stwio	zero,0(r2)
-}
- 37c:	f800283a 	ret
-		cont_seg = 0;
- 380:	d0200315 	stw	zero,-32756(gp)
- 384:	003fdb06 	br	2f4 <timer_s_inter+0x14>
-	int digito1 = cont_seg; //cont_seg%10;
- 388:	014003c4 	movi	r5,15
- 38c:	003fe406 	br	320 <timer_s_inter+0x40>
-	else if (digito2 == 2){Output2 = 18;}
- 390:	00c00484 	movi	r3,18
- 394:	003ff306 	br	364 <timer_s_inter+0x84>
-	else if (digito2 == 3){Output2 = 6;}
- 398:	00c00184 	movi	r3,6
- 39c:	003ff106 	br	364 <timer_s_inter+0x84>
-	else if (digito2 == 4){Output2 = 76;}
- 3a0:	00c01304 	movi	r3,76
- 3a4:	003fef06 	br	364 <timer_s_inter+0x84>
-	else if (digito2 == 5){Output2 = 36;}
- 3a8:	00c00904 	movi	r3,36
- 3ac:	003fed06 	br	364 <timer_s_inter+0x84>
-	else if (digito2 == 6){Output2 = 32;}
- 3b0:	00c00804 	movi	r3,32
- 3b4:	003feb06 	br	364 <timer_s_inter+0x84>
-	else if (digito2 == 7){Output2 = 15;}
- 3b8:	00c003c4 	movi	r3,15
- 3bc:	003fe906 	br	364 <timer_s_inter+0x84>
-	else if (digito2 == 8){Output2 = 0;}
- 3c0:	0007883a 	mov	r3,zero
- 3c4:	003fe706 	br	364 <timer_s_inter+0x84>
-	else if (digito2 == 9){Output2 = 4;}else{Output2 = 127;}
- 3c8:	00c00104 	movi	r3,4
- 3cc:	003fe506 	br	364 <timer_s_inter+0x84>
+ 344:	00800104 	movi	r2,4
+ 348:	003fd006 	br	28c <timer_min_inter+0xd0>
 
-000003d0 <main>:
+0000034c <timer_ms_inter>:
+	cont_mseg ++;
+ 34c:	d0a00217 	ldw	r2,-32760(gp)
+{
+ 350:	defffe04 	addi	sp,sp,-8
+ 354:	dfc00115 	stw	ra,4(sp)
+	cont_mseg ++;
+ 358:	10800044 	addi	r2,r2,1
+{
+ 35c:	dc000015 	stw	r16,0(sp)
+	if (cont_mseg > 60){
+ 360:	10c00f48 	cmpgei	r3,r2,61
+ 364:	1800371e 	bne	r3,zero,444 <timer_ms_inter+0xf8>
+	cont_mseg ++;
+ 368:	d0a00215 	stw	r2,-32760(gp)
+	int digito1 = cont_mseg%10;
+ 36c:	d1200217 	ldw	r4,-32760(gp)
+ 370:	01400284 	movi	r5,10
+ 374:	00007c80 	call	7c8 <__modsi3>
+	int digito2 = floor(10/cont_mseg);
+ 378:	d1600217 	ldw	r5,-32760(gp)
+	int digito1 = cont_mseg%10;
+ 37c:	1021883a 	mov	r16,r2
+	int digito2 = floor(10/cont_mseg);
+ 380:	01000284 	movi	r4,10
+ 384:	00007480 	call	748 <__divsi3>
+	if (digito1 == 0){Output1 = 1;}
+ 388:	80003026 	beq	r16,zero,44c <timer_ms_inter+0x100>
+	else if (digito1 == 1){Output1 = 79;}
+ 38c:	80c00060 	cmpeqi	r3,r16,1
+ 390:	1800301e 	bne	r3,zero,454 <timer_ms_inter+0x108>
+	else if (digito1 == 2){Output1 = 18;}
+ 394:	80c000a0 	cmpeqi	r3,r16,2
+ 398:	1800301e 	bne	r3,zero,45c <timer_ms_inter+0x110>
+	else if (digito1 == 3){Output1 = 6;}
+ 39c:	80c000e0 	cmpeqi	r3,r16,3
+ 3a0:	1800301e 	bne	r3,zero,464 <timer_ms_inter+0x118>
+	else if (digito1 == 4){Output1 = 76;}
+ 3a4:	80c00120 	cmpeqi	r3,r16,4
+ 3a8:	1800301e 	bne	r3,zero,46c <timer_ms_inter+0x120>
+	else if (digito1 == 5){Output1 = 36;}
+ 3ac:	80c00160 	cmpeqi	r3,r16,5
+ 3b0:	1800301e 	bne	r3,zero,474 <timer_ms_inter+0x128>
+	else if (digito1 == 6){Output1 = 32;}
+ 3b4:	80c001a0 	cmpeqi	r3,r16,6
+ 3b8:	1800301e 	bne	r3,zero,47c <timer_ms_inter+0x130>
+	else if (digito1 == 7){Output1 = 15;}
+ 3bc:	80c001e0 	cmpeqi	r3,r16,7
+ 3c0:	1800301e 	bne	r3,zero,484 <timer_ms_inter+0x138>
+	unsigned Output1 = 0;
+ 3c4:	80c00260 	cmpeqi	r3,r16,9
+ 3c8:	180690ba 	slli	r3,r3,2
+	if (digito2 == 0){Output2 = 1;}
+ 3cc:	10002f26 	beq	r2,zero,48c <timer_ms_inter+0x140>
+	else if (digito2 == 1){Output2 = 79;}
+ 3d0:	11000060 	cmpeqi	r4,r2,1
+ 3d4:	20002f1e 	bne	r4,zero,494 <timer_ms_inter+0x148>
+	else if (digito2 == 2){Output2 = 18;}
+ 3d8:	110000a0 	cmpeqi	r4,r2,2
+ 3dc:	20002f1e 	bne	r4,zero,49c <timer_ms_inter+0x150>
+	else if (digito2 == 3){Output2 = 6;}
+ 3e0:	110000e0 	cmpeqi	r4,r2,3
+ 3e4:	20002f1e 	bne	r4,zero,4a4 <timer_ms_inter+0x158>
+	else if (digito2 == 4){Output2 = 76;}
+ 3e8:	11000120 	cmpeqi	r4,r2,4
+ 3ec:	20002f1e 	bne	r4,zero,4ac <timer_ms_inter+0x160>
+	else if (digito2 == 5){Output2 = 36;}
+ 3f0:	11000160 	cmpeqi	r4,r2,5
+ 3f4:	20002f1e 	bne	r4,zero,4b4 <timer_ms_inter+0x168>
+	else if (digito2 == 6){Output2 = 32;}
+ 3f8:	110001a0 	cmpeqi	r4,r2,6
+ 3fc:	20002f1e 	bne	r4,zero,4bc <timer_ms_inter+0x170>
+	else if (digito2 == 7){Output2 = 15;}
+ 400:	110001e0 	cmpeqi	r4,r2,7
+ 404:	20002f1e 	bne	r4,zero,4c4 <timer_ms_inter+0x178>
+	else if (digito2 == 8){Output2 = 0;}
+ 408:	11000220 	cmpeqi	r4,r2,8
+ 40c:	20002f1e 	bne	r4,zero,4cc <timer_ms_inter+0x180>
+	else if (digito2 == 9){Output2 = 4;}else{Output2 = 127;}
+ 410:	10800260 	cmpeqi	r2,r2,9
+ 414:	10002f1e 	bne	r2,zero,4d4 <timer_ms_inter+0x188>
+ 418:	00801fc4 	movi	r2,127
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_5_BASE,Output2);
+ 41c:	01000474 	movhi	r4,17
+ 420:	20800035 	stwio	r2,0(r4)
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_6_BASE,Output1);
+ 424:	008004b4 	movhi	r2,18
+ 428:	10c00035 	stwio	r3,0(r2)
+	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_MS_BASE,0);
+ 42c:	008000f4 	movhi	r2,3
+ 430:	10000035 	stwio	zero,0(r2)
+}
+ 434:	dfc00117 	ldw	ra,4(sp)
+ 438:	dc000017 	ldw	r16,0(sp)
+ 43c:	dec00204 	addi	sp,sp,8
+ 440:	f800283a 	ret
+		cont_mseg = 0;
+ 444:	d0200215 	stw	zero,-32760(gp)
+ 448:	003fc806 	br	36c <timer_ms_inter+0x20>
+	if (digito1 == 0){Output1 = 1;}
+ 44c:	00c00044 	movi	r3,1
+ 450:	003fde06 	br	3cc <timer_ms_inter+0x80>
+	else if (digito1 == 1){Output1 = 79;}
+ 454:	00c013c4 	movi	r3,79
+ 458:	003fdc06 	br	3cc <timer_ms_inter+0x80>
+	else if (digito1 == 2){Output1 = 18;}
+ 45c:	00c00484 	movi	r3,18
+ 460:	003fda06 	br	3cc <timer_ms_inter+0x80>
+	else if (digito1 == 3){Output1 = 6;}
+ 464:	00c00184 	movi	r3,6
+ 468:	003fd806 	br	3cc <timer_ms_inter+0x80>
+	else if (digito1 == 4){Output1 = 76;}
+ 46c:	00c01304 	movi	r3,76
+ 470:	003fd606 	br	3cc <timer_ms_inter+0x80>
+	else if (digito1 == 5){Output1 = 36;}
+ 474:	00c00904 	movi	r3,36
+ 478:	003fd406 	br	3cc <timer_ms_inter+0x80>
+	else if (digito1 == 6){Output1 = 32;}
+ 47c:	00c00804 	movi	r3,32
+ 480:	003fd206 	br	3cc <timer_ms_inter+0x80>
+	else if (digito1 == 7){Output1 = 15;}
+ 484:	00c003c4 	movi	r3,15
+ 488:	003fd006 	br	3cc <timer_ms_inter+0x80>
+	if (digito2 == 0){Output2 = 1;}
+ 48c:	00800044 	movi	r2,1
+ 490:	003fe206 	br	41c <timer_ms_inter+0xd0>
+	else if (digito2 == 1){Output2 = 79;}
+ 494:	008013c4 	movi	r2,79
+ 498:	003fe006 	br	41c <timer_ms_inter+0xd0>
+	else if (digito2 == 2){Output2 = 18;}
+ 49c:	00800484 	movi	r2,18
+ 4a0:	003fde06 	br	41c <timer_ms_inter+0xd0>
+	else if (digito2 == 3){Output2 = 6;}
+ 4a4:	00800184 	movi	r2,6
+ 4a8:	003fdc06 	br	41c <timer_ms_inter+0xd0>
+	else if (digito2 == 4){Output2 = 76;}
+ 4ac:	00801304 	movi	r2,76
+ 4b0:	003fda06 	br	41c <timer_ms_inter+0xd0>
+	else if (digito2 == 5){Output2 = 36;}
+ 4b4:	00800904 	movi	r2,36
+ 4b8:	003fd806 	br	41c <timer_ms_inter+0xd0>
+	else if (digito2 == 6){Output2 = 32;}
+ 4bc:	00800804 	movi	r2,32
+ 4c0:	003fd606 	br	41c <timer_ms_inter+0xd0>
+	else if (digito2 == 7){Output2 = 15;}
+ 4c4:	008003c4 	movi	r2,15
+ 4c8:	003fd406 	br	41c <timer_ms_inter+0xd0>
+	else if (digito2 == 8){Output2 = 0;}
+ 4cc:	0005883a 	mov	r2,zero
+ 4d0:	003fd206 	br	41c <timer_ms_inter+0xd0>
+	else if (digito2 == 9){Output2 = 4;}else{Output2 = 127;}
+ 4d4:	00800104 	movi	r2,4
+ 4d8:	003fd006 	br	41c <timer_ms_inter+0xd0>
+
+000004dc <timer_s_inter>:
+	cont_seg ++;
+ 4dc:	d0a00317 	ldw	r2,-32756(gp)
+{
+ 4e0:	defffe04 	addi	sp,sp,-8
+ 4e4:	dfc00115 	stw	ra,4(sp)
+	cont_seg ++;
+ 4e8:	10800044 	addi	r2,r2,1
+{
+ 4ec:	dc000015 	stw	r16,0(sp)
+	if (cont_seg > 60){
+ 4f0:	10c00f48 	cmpgei	r3,r2,61
+ 4f4:	1800371e 	bne	r3,zero,5d4 <timer_s_inter+0xf8>
+	cont_seg ++;
+ 4f8:	d0a00315 	stw	r2,-32756(gp)
+	int digito1 = cont_seg%10;
+ 4fc:	d1200317 	ldw	r4,-32756(gp)
+ 500:	01400284 	movi	r5,10
+ 504:	00007c80 	call	7c8 <__modsi3>
+	int digito2 = floor(10/cont_seg);
+ 508:	d1600317 	ldw	r5,-32756(gp)
+	int digito1 = cont_seg%10;
+ 50c:	1021883a 	mov	r16,r2
+	int digito2 = floor(10/cont_seg);
+ 510:	01000284 	movi	r4,10
+ 514:	00007480 	call	748 <__divsi3>
+	if (digito1 == 0){Output1 = 1;}
+ 518:	80003026 	beq	r16,zero,5dc <timer_s_inter+0x100>
+	else if (digito1 == 1){Output1 = 79;}
+ 51c:	80c00060 	cmpeqi	r3,r16,1
+ 520:	1800301e 	bne	r3,zero,5e4 <timer_s_inter+0x108>
+	else if (digito1 == 2){Output1 = 18;}
+ 524:	80c000a0 	cmpeqi	r3,r16,2
+ 528:	1800301e 	bne	r3,zero,5ec <timer_s_inter+0x110>
+	else if (digito1 == 3){Output1 = 6;}
+ 52c:	80c000e0 	cmpeqi	r3,r16,3
+ 530:	1800301e 	bne	r3,zero,5f4 <timer_s_inter+0x118>
+	else if (digito1 == 4){Output1 = 76;}
+ 534:	80c00120 	cmpeqi	r3,r16,4
+ 538:	1800301e 	bne	r3,zero,5fc <timer_s_inter+0x120>
+	else if (digito1 == 5){Output1 = 36;}
+ 53c:	80c00160 	cmpeqi	r3,r16,5
+ 540:	1800301e 	bne	r3,zero,604 <timer_s_inter+0x128>
+	else if (digito1 == 6){Output1 = 32;}
+ 544:	80c001a0 	cmpeqi	r3,r16,6
+ 548:	1800301e 	bne	r3,zero,60c <timer_s_inter+0x130>
+	else if (digito1 == 7){Output1 = 15;}
+ 54c:	80c001e0 	cmpeqi	r3,r16,7
+ 550:	1800301e 	bne	r3,zero,614 <timer_s_inter+0x138>
+	unsigned Output1 = 0;
+ 554:	80c00260 	cmpeqi	r3,r16,9
+ 558:	180690ba 	slli	r3,r3,2
+	if (digito2 == 0){Output2 = 1;}
+ 55c:	10002f26 	beq	r2,zero,61c <timer_s_inter+0x140>
+	else if (digito2 == 1){Output2 = 79;}
+ 560:	11000060 	cmpeqi	r4,r2,1
+ 564:	20002f1e 	bne	r4,zero,624 <timer_s_inter+0x148>
+	else if (digito2 == 2){Output2 = 18;}
+ 568:	110000a0 	cmpeqi	r4,r2,2
+ 56c:	20002f1e 	bne	r4,zero,62c <timer_s_inter+0x150>
+	else if (digito2 == 3){Output2 = 6;}
+ 570:	110000e0 	cmpeqi	r4,r2,3
+ 574:	20002f1e 	bne	r4,zero,634 <timer_s_inter+0x158>
+	else if (digito2 == 4){Output2 = 76;}
+ 578:	11000120 	cmpeqi	r4,r2,4
+ 57c:	20002f1e 	bne	r4,zero,63c <timer_s_inter+0x160>
+	else if (digito2 == 5){Output2 = 36;}
+ 580:	11000160 	cmpeqi	r4,r2,5
+ 584:	20002f1e 	bne	r4,zero,644 <timer_s_inter+0x168>
+	else if (digito2 == 6){Output2 = 32;}
+ 588:	110001a0 	cmpeqi	r4,r2,6
+ 58c:	20002f1e 	bne	r4,zero,64c <timer_s_inter+0x170>
+	else if (digito2 == 7){Output2 = 15;}
+ 590:	110001e0 	cmpeqi	r4,r2,7
+ 594:	20002f1e 	bne	r4,zero,654 <timer_s_inter+0x178>
+	else if (digito2 == 8){Output2 = 0;}
+ 598:	11000220 	cmpeqi	r4,r2,8
+ 59c:	20002f1e 	bne	r4,zero,65c <timer_s_inter+0x180>
+	else if (digito2 == 9){Output2 = 4;}else{Output2 = 127;}
+ 5a0:	10800260 	cmpeqi	r2,r2,9
+ 5a4:	10002f1e 	bne	r2,zero,664 <timer_s_inter+0x188>
+ 5a8:	00801fc4 	movi	r2,127
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_3_BASE,Output2);
+ 5ac:	010001b4 	movhi	r4,6
+ 5b0:	20800035 	stwio	r2,0(r4)
+	IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_4_BASE,Output1);
+ 5b4:	008001f4 	movhi	r2,7
+ 5b8:	10c00035 	stwio	r3,0(r2)
+	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_S_BASE,0);
+ 5bc:	008000b4 	movhi	r2,2
+ 5c0:	10000035 	stwio	zero,0(r2)
+}
+ 5c4:	dfc00117 	ldw	ra,4(sp)
+ 5c8:	dc000017 	ldw	r16,0(sp)
+ 5cc:	dec00204 	addi	sp,sp,8
+ 5d0:	f800283a 	ret
+		cont_seg = 0;
+ 5d4:	d0200315 	stw	zero,-32756(gp)
+ 5d8:	003fc806 	br	4fc <timer_s_inter+0x20>
+	if (digito1 == 0){Output1 = 1;}
+ 5dc:	00c00044 	movi	r3,1
+ 5e0:	003fde06 	br	55c <timer_s_inter+0x80>
+	else if (digito1 == 1){Output1 = 79;}
+ 5e4:	00c013c4 	movi	r3,79
+ 5e8:	003fdc06 	br	55c <timer_s_inter+0x80>
+	else if (digito1 == 2){Output1 = 18;}
+ 5ec:	00c00484 	movi	r3,18
+ 5f0:	003fda06 	br	55c <timer_s_inter+0x80>
+	else if (digito1 == 3){Output1 = 6;}
+ 5f4:	00c00184 	movi	r3,6
+ 5f8:	003fd806 	br	55c <timer_s_inter+0x80>
+	else if (digito1 == 4){Output1 = 76;}
+ 5fc:	00c01304 	movi	r3,76
+ 600:	003fd606 	br	55c <timer_s_inter+0x80>
+	else if (digito1 == 5){Output1 = 36;}
+ 604:	00c00904 	movi	r3,36
+ 608:	003fd406 	br	55c <timer_s_inter+0x80>
+	else if (digito1 == 6){Output1 = 32;}
+ 60c:	00c00804 	movi	r3,32
+ 610:	003fd206 	br	55c <timer_s_inter+0x80>
+	else if (digito1 == 7){Output1 = 15;}
+ 614:	00c003c4 	movi	r3,15
+ 618:	003fd006 	br	55c <timer_s_inter+0x80>
+	if (digito2 == 0){Output2 = 1;}
+ 61c:	00800044 	movi	r2,1
+ 620:	003fe206 	br	5ac <timer_s_inter+0xd0>
+	else if (digito2 == 1){Output2 = 79;}
+ 624:	008013c4 	movi	r2,79
+ 628:	003fe006 	br	5ac <timer_s_inter+0xd0>
+	else if (digito2 == 2){Output2 = 18;}
+ 62c:	00800484 	movi	r2,18
+ 630:	003fde06 	br	5ac <timer_s_inter+0xd0>
+	else if (digito2 == 3){Output2 = 6;}
+ 634:	00800184 	movi	r2,6
+ 638:	003fdc06 	br	5ac <timer_s_inter+0xd0>
+	else if (digito2 == 4){Output2 = 76;}
+ 63c:	00801304 	movi	r2,76
+ 640:	003fda06 	br	5ac <timer_s_inter+0xd0>
+	else if (digito2 == 5){Output2 = 36;}
+ 644:	00800904 	movi	r2,36
+ 648:	003fd806 	br	5ac <timer_s_inter+0xd0>
+	else if (digito2 == 6){Output2 = 32;}
+ 64c:	00800804 	movi	r2,32
+ 650:	003fd606 	br	5ac <timer_s_inter+0xd0>
+	else if (digito2 == 7){Output2 = 15;}
+ 654:	008003c4 	movi	r2,15
+ 658:	003fd406 	br	5ac <timer_s_inter+0xd0>
+	else if (digito2 == 8){Output2 = 0;}
+ 65c:	0005883a 	mov	r2,zero
+ 660:	003fd206 	br	5ac <timer_s_inter+0xd0>
+	else if (digito2 == 9){Output2 = 4;}else{Output2 = 127;}
+ 664:	00800104 	movi	r2,4
+ 668:	003fd006 	br	5ac <timer_s_inter+0xd0>
+
+0000066c <main>:
 
 
 
 int main()
 { 
- 3d0:	defffe04 	addi	sp,sp,-8
+ 66c:	defffe04 	addi	sp,sp,-8
 	unsigned modo = IORD_ALTERA_AVALON_PIO_DATA(SWITCHS_BASE);
- 3d4:	00800234 	movhi	r2,8
+ 670:	00800234 	movhi	r2,8
 { 
- 3d8:	dfc00115 	stw	ra,4(sp)
+ 674:	dfc00115 	stw	ra,4(sp)
 	unsigned modo = IORD_ALTERA_AVALON_PIO_DATA(SWITCHS_BASE);
- 3dc:	10800037 	ldwio	r2,0(r2)
+ 678:	10800037 	ldwio	r2,0(r2)
 
 	unsigned init = IORD_ALTERA_AVALON_PIO_DATA(SWITCHS_BASE);
- 3e0:	00800234 	movhi	r2,8
- 3e4:	10800037 	ldwio	r2,0(r2)
-		//}
-	//}
-
-	//if(onof==1){
-
-	alt_ic_isr_register(
- 3e8:	01800034 	movhi	r6,0
- 3ec:	d8000015 	stw	zero,0(sp)
- 3f0:	000f883a 	mov	r7,zero
- 3f4:	3180b804 	addi	r6,r6,736
- 3f8:	000b883a 	mov	r5,zero
- 3fc:	0009883a 	mov	r4,zero
- 400:	00006100 	call	610 <alt_ic_isr_register>
-					TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
-						  );
-	alt_ic_isr_register(
- 404:	01800034 	movhi	r6,0
- 408:	d8000015 	stw	zero,0(sp)
- 40c:	000f883a 	mov	r7,zero
- 410:	31808d04 	addi	r6,r6,564
- 414:	01400044 	movi	r5,1
- 418:	0009883a 	mov	r4,zero
- 41c:	00006100 	call	610 <alt_ic_isr_register>
-					TIMER_MS_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MS_IRQ,timer_ms_inter,NULL,NULL
+ 67c:	00c00234 	movhi	r3,8
+ 680:	18c00037 	ldwio	r3,0(r3)
 					  );
 
 	alt_ic_isr_register(
- 420:	01800034 	movhi	r6,0
- 424:	d8000015 	stw	zero,0(sp)
- 428:	000f883a 	mov	r7,zero
- 42c:	31806f04 	addi	r6,r6,444
- 430:	014000c4 	movi	r5,3
- 434:	0009883a 	mov	r4,zero
- 438:	00006100 	call	610 <alt_ic_isr_register>
+					TIMER_MIN_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MIN_IRQ,timer_min_inter,NULL,NULL
+			  	  	  );*/
+		if (modo == 0){
+ 684:	1000081e 	bne	r2,zero,6a8 <main+0x3c>
+					alt_ic_isr_register(
+							TIMER_S_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_S_IRQ,timer_s_inter,NULL,NULL
+							  );
+
+		}if (modo == 2){
+				alt_ic_isr_register(
+ 688:	01800034 	movhi	r6,0
+ 68c:	d8000015 	stw	zero,0(sp)
+ 690:	000f883a 	mov	r7,zero
+ 694:	31813704 	addi	r6,r6,1244
+ 698:	000b883a 	mov	r5,zero
+
+				alt_ic_isr_register(
+						TIMER_MS_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MS_IRQ,timer_ms_inter,NULL,NULL
+						  );
+
+				alt_ic_isr_register(
+ 69c:	0009883a 	mov	r4,zero
+ 6a0:	00008fc0 	call	8fc <alt_ic_isr_register>
+ 6a4:	00000c06 	br	6d8 <main+0x6c>
+		}if (modo == 2){
+ 6a8:	10c000a0 	cmpeqi	r3,r2,2
+ 6ac:	183ff61e 	bne	r3,zero,688 <main+0x1c>
+		}if(modo == 1){
+ 6b0:	10c00060 	cmpeqi	r3,r2,1
+ 6b4:	18000626 	beq	r3,zero,6d0 <main+0x64>
+				alt_ic_isr_register(
+ 6b8:	01800034 	movhi	r6,0
+ 6bc:	d8000015 	stw	zero,0(sp)
+ 6c0:	000f883a 	mov	r7,zero
+ 6c4:	3180d304 	addi	r6,r6,844
+ 6c8:	01400044 	movi	r5,1
+ 6cc:	003ff306 	br	69c <main+0x30>
+		}if(modo ==3){
+ 6d0:	108000e0 	cmpeqi	r2,r2,3
+ 6d4:	1000081e 	bne	r2,zero,6f8 <main+0x8c>
 						TIMER_MIN_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_MIN_IRQ,timer_min_inter,NULL,NULL
 						  );
-			}*/
+			}
 	//}
 
 	IOWR_ALTERA_AVALON_TIMER_CONTROL(
- 43c:	008000c4 	movi	r2,3
- 440:	00c000b4 	movhi	r3,2
- 444:	18800135 	stwio	r2,4(r3)
+ 6d8:	008000c4 	movi	r2,3
+ 6dc:	00c000b4 	movhi	r3,2
+ 6e0:	18800135 	stwio	r2,4(r3)
 			TIMER_S_BASE,ALTERA_AVALON_TIMER_CONTROL_ITO_MSK | ALTERA_AVALON_TIMER_CONTROL_CONT_MSK);
 
 	IOWR_ALTERA_AVALON_TIMER_CONTROL(
- 448:	00c000f4 	movhi	r3,3
- 44c:	18800135 	stwio	r2,4(r3)
+ 6e4:	00c000f4 	movhi	r3,3
+ 6e8:	18800135 	stwio	r2,4(r3)
 			TIMER_MS_BASE,ALTERA_AVALON_TIMER_CONTROL_ITO_MSK | ALTERA_AVALON_TIMER_CONTROL_CONT_MSK);
 
 	IOWR_ALTERA_AVALON_TIMER_CONTROL(
- 450:	00c00434 	movhi	r3,16
- 454:	18800135 	stwio	r2,4(r3)
+ 6ec:	00c00434 	movhi	r3,16
+ 6f0:	18800135 	stwio	r2,4(r3)
 
 
 
 
   /* Event loop never exits. */
   while (1);
- 458:	003fff06 	br	458 <main+0x88>
+ 6f4:	003fff06 	br	6f4 <main+0x88>
+				alt_ic_isr_register(
+ 6f8:	01800034 	movhi	r6,0
+ 6fc:	000f883a 	mov	r7,zero
+ 700:	31813704 	addi	r6,r6,1244
+ 704:	000b883a 	mov	r5,zero
+ 708:	0009883a 	mov	r4,zero
+ 70c:	d8000015 	stw	zero,0(sp)
+ 710:	00008fc0 	call	8fc <alt_ic_isr_register>
+				alt_ic_isr_register(
+ 714:	01800034 	movhi	r6,0
+ 718:	000f883a 	mov	r7,zero
+ 71c:	3180d304 	addi	r6,r6,844
+ 720:	01400044 	movi	r5,1
+ 724:	d8000015 	stw	zero,0(sp)
+ 728:	0009883a 	mov	r4,zero
+ 72c:	00008fc0 	call	8fc <alt_ic_isr_register>
+				alt_ic_isr_register(
+ 730:	01800034 	movhi	r6,0
+ 734:	d8000015 	stw	zero,0(sp)
+ 738:	000f883a 	mov	r7,zero
+ 73c:	31806f04 	addi	r6,r6,444
+ 740:	014000c4 	movi	r5,3
+ 744:	003fd506 	br	69c <main+0x30>
 
-0000045c <__divsi3>:
- 45c:	20001a16 	blt	r4,zero,4c8 <__divsi3+0x6c>
- 460:	000f883a 	mov	r7,zero
- 464:	2800020e 	bge	r5,zero,470 <__divsi3+0x14>
- 468:	014bc83a 	sub	r5,zero,r5
- 46c:	39c0005c 	xori	r7,r7,1
- 470:	200d883a 	mov	r6,r4
- 474:	00c00044 	movi	r3,1
- 478:	2900092e 	bgeu	r5,r4,4a0 <__divsi3+0x44>
- 47c:	00800804 	movi	r2,32
- 480:	00c00044 	movi	r3,1
- 484:	00000106 	br	48c <__divsi3+0x30>
- 488:	10001226 	beq	r2,zero,4d4 <__divsi3+0x78>
- 48c:	294b883a 	add	r5,r5,r5
- 490:	10bfffc4 	addi	r2,r2,-1
- 494:	18c7883a 	add	r3,r3,r3
- 498:	293ffb36 	bltu	r5,r4,488 <__divsi3+0x2c>
- 49c:	18000d26 	beq	r3,zero,4d4 <__divsi3+0x78>
- 4a0:	0005883a 	mov	r2,zero
- 4a4:	31400236 	bltu	r6,r5,4b0 <__divsi3+0x54>
- 4a8:	314dc83a 	sub	r6,r6,r5
- 4ac:	10c4b03a 	or	r2,r2,r3
- 4b0:	1806d07a 	srli	r3,r3,1
- 4b4:	280ad07a 	srli	r5,r5,1
- 4b8:	183ffa1e 	bne	r3,zero,4a4 <__divsi3+0x48>
- 4bc:	38000126 	beq	r7,zero,4c4 <__divsi3+0x68>
- 4c0:	0085c83a 	sub	r2,zero,r2
- 4c4:	f800283a 	ret
- 4c8:	0109c83a 	sub	r4,zero,r4
- 4cc:	01c00044 	movi	r7,1
- 4d0:	003fe406 	br	464 <__divsi3+0x8>
- 4d4:	0005883a 	mov	r2,zero
- 4d8:	003ff806 	br	4bc <__divsi3+0x60>
+00000748 <__divsi3>:
+ 748:	20001a16 	blt	r4,zero,7b4 <__divsi3+0x6c>
+ 74c:	000f883a 	mov	r7,zero
+ 750:	2800020e 	bge	r5,zero,75c <__divsi3+0x14>
+ 754:	014bc83a 	sub	r5,zero,r5
+ 758:	39c0005c 	xori	r7,r7,1
+ 75c:	200d883a 	mov	r6,r4
+ 760:	00c00044 	movi	r3,1
+ 764:	2900092e 	bgeu	r5,r4,78c <__divsi3+0x44>
+ 768:	00800804 	movi	r2,32
+ 76c:	00c00044 	movi	r3,1
+ 770:	00000106 	br	778 <__divsi3+0x30>
+ 774:	10001226 	beq	r2,zero,7c0 <__divsi3+0x78>
+ 778:	294b883a 	add	r5,r5,r5
+ 77c:	10bfffc4 	addi	r2,r2,-1
+ 780:	18c7883a 	add	r3,r3,r3
+ 784:	293ffb36 	bltu	r5,r4,774 <__divsi3+0x2c>
+ 788:	18000d26 	beq	r3,zero,7c0 <__divsi3+0x78>
+ 78c:	0005883a 	mov	r2,zero
+ 790:	31400236 	bltu	r6,r5,79c <__divsi3+0x54>
+ 794:	314dc83a 	sub	r6,r6,r5
+ 798:	10c4b03a 	or	r2,r2,r3
+ 79c:	1806d07a 	srli	r3,r3,1
+ 7a0:	280ad07a 	srli	r5,r5,1
+ 7a4:	183ffa1e 	bne	r3,zero,790 <__divsi3+0x48>
+ 7a8:	38000126 	beq	r7,zero,7b0 <__divsi3+0x68>
+ 7ac:	0085c83a 	sub	r2,zero,r2
+ 7b0:	f800283a 	ret
+ 7b4:	0109c83a 	sub	r4,zero,r4
+ 7b8:	01c00044 	movi	r7,1
+ 7bc:	003fe406 	br	750 <__divsi3+0x8>
+ 7c0:	0005883a 	mov	r2,zero
+ 7c4:	003ff806 	br	7a8 <__divsi3+0x60>
 
-000004dc <__modsi3>:
- 4dc:	20001916 	blt	r4,zero,544 <__modsi3+0x68>
- 4e0:	000f883a 	mov	r7,zero
- 4e4:	2005883a 	mov	r2,r4
- 4e8:	2800010e 	bge	r5,zero,4f0 <__modsi3+0x14>
- 4ec:	014bc83a 	sub	r5,zero,r5
- 4f0:	00c00044 	movi	r3,1
- 4f4:	2900092e 	bgeu	r5,r4,51c <__modsi3+0x40>
- 4f8:	01800804 	movi	r6,32
- 4fc:	00c00044 	movi	r3,1
- 500:	00000106 	br	508 <__modsi3+0x2c>
- 504:	30000d26 	beq	r6,zero,53c <__modsi3+0x60>
- 508:	294b883a 	add	r5,r5,r5
- 50c:	31bfffc4 	addi	r6,r6,-1
- 510:	18c7883a 	add	r3,r3,r3
- 514:	293ffb36 	bltu	r5,r4,504 <__modsi3+0x28>
- 518:	18000826 	beq	r3,zero,53c <__modsi3+0x60>
- 51c:	1806d07a 	srli	r3,r3,1
- 520:	11400136 	bltu	r2,r5,528 <__modsi3+0x4c>
- 524:	1145c83a 	sub	r2,r2,r5
- 528:	280ad07a 	srli	r5,r5,1
- 52c:	183ffb1e 	bne	r3,zero,51c <__modsi3+0x40>
- 530:	38000126 	beq	r7,zero,538 <__modsi3+0x5c>
- 534:	0085c83a 	sub	r2,zero,r2
- 538:	f800283a 	ret
- 53c:	2005883a 	mov	r2,r4
- 540:	003ffb06 	br	530 <__modsi3+0x54>
- 544:	0109c83a 	sub	r4,zero,r4
- 548:	01c00044 	movi	r7,1
- 54c:	003fe506 	br	4e4 <__modsi3+0x8>
+000007c8 <__modsi3>:
+ 7c8:	20001916 	blt	r4,zero,830 <__modsi3+0x68>
+ 7cc:	000f883a 	mov	r7,zero
+ 7d0:	2005883a 	mov	r2,r4
+ 7d4:	2800010e 	bge	r5,zero,7dc <__modsi3+0x14>
+ 7d8:	014bc83a 	sub	r5,zero,r5
+ 7dc:	00c00044 	movi	r3,1
+ 7e0:	2900092e 	bgeu	r5,r4,808 <__modsi3+0x40>
+ 7e4:	01800804 	movi	r6,32
+ 7e8:	00c00044 	movi	r3,1
+ 7ec:	00000106 	br	7f4 <__modsi3+0x2c>
+ 7f0:	30000d26 	beq	r6,zero,828 <__modsi3+0x60>
+ 7f4:	294b883a 	add	r5,r5,r5
+ 7f8:	31bfffc4 	addi	r6,r6,-1
+ 7fc:	18c7883a 	add	r3,r3,r3
+ 800:	293ffb36 	bltu	r5,r4,7f0 <__modsi3+0x28>
+ 804:	18000826 	beq	r3,zero,828 <__modsi3+0x60>
+ 808:	1806d07a 	srli	r3,r3,1
+ 80c:	11400136 	bltu	r2,r5,814 <__modsi3+0x4c>
+ 810:	1145c83a 	sub	r2,r2,r5
+ 814:	280ad07a 	srli	r5,r5,1
+ 818:	183ffb1e 	bne	r3,zero,808 <__modsi3+0x40>
+ 81c:	38000126 	beq	r7,zero,824 <__modsi3+0x5c>
+ 820:	0085c83a 	sub	r2,zero,r2
+ 824:	f800283a 	ret
+ 828:	2005883a 	mov	r2,r4
+ 82c:	003ffb06 	br	81c <__modsi3+0x54>
+ 830:	0109c83a 	sub	r4,zero,r4
+ 834:	01c00044 	movi	r7,1
+ 838:	003fe506 	br	7d0 <__modsi3+0x8>
 
-00000550 <__udivsi3>:
- 550:	200d883a 	mov	r6,r4
- 554:	2900152e 	bgeu	r5,r4,5ac <__udivsi3+0x5c>
- 558:	28001416 	blt	r5,zero,5ac <__udivsi3+0x5c>
- 55c:	00800804 	movi	r2,32
- 560:	00c00044 	movi	r3,1
- 564:	00000206 	br	570 <__udivsi3+0x20>
- 568:	10000e26 	beq	r2,zero,5a4 <__udivsi3+0x54>
- 56c:	28000516 	blt	r5,zero,584 <__udivsi3+0x34>
- 570:	294b883a 	add	r5,r5,r5
- 574:	10bfffc4 	addi	r2,r2,-1
- 578:	18c7883a 	add	r3,r3,r3
- 57c:	293ffa36 	bltu	r5,r4,568 <__udivsi3+0x18>
- 580:	18000826 	beq	r3,zero,5a4 <__udivsi3+0x54>
- 584:	0005883a 	mov	r2,zero
- 588:	31400236 	bltu	r6,r5,594 <__udivsi3+0x44>
- 58c:	314dc83a 	sub	r6,r6,r5
- 590:	10c4b03a 	or	r2,r2,r3
- 594:	1806d07a 	srli	r3,r3,1
- 598:	280ad07a 	srli	r5,r5,1
- 59c:	183ffa1e 	bne	r3,zero,588 <__udivsi3+0x38>
- 5a0:	f800283a 	ret
- 5a4:	0005883a 	mov	r2,zero
- 5a8:	f800283a 	ret
- 5ac:	00c00044 	movi	r3,1
- 5b0:	003ff406 	br	584 <__udivsi3+0x34>
+0000083c <__udivsi3>:
+ 83c:	200d883a 	mov	r6,r4
+ 840:	2900152e 	bgeu	r5,r4,898 <__udivsi3+0x5c>
+ 844:	28001416 	blt	r5,zero,898 <__udivsi3+0x5c>
+ 848:	00800804 	movi	r2,32
+ 84c:	00c00044 	movi	r3,1
+ 850:	00000206 	br	85c <__udivsi3+0x20>
+ 854:	10000e26 	beq	r2,zero,890 <__udivsi3+0x54>
+ 858:	28000516 	blt	r5,zero,870 <__udivsi3+0x34>
+ 85c:	294b883a 	add	r5,r5,r5
+ 860:	10bfffc4 	addi	r2,r2,-1
+ 864:	18c7883a 	add	r3,r3,r3
+ 868:	293ffa36 	bltu	r5,r4,854 <__udivsi3+0x18>
+ 86c:	18000826 	beq	r3,zero,890 <__udivsi3+0x54>
+ 870:	0005883a 	mov	r2,zero
+ 874:	31400236 	bltu	r6,r5,880 <__udivsi3+0x44>
+ 878:	314dc83a 	sub	r6,r6,r5
+ 87c:	10c4b03a 	or	r2,r2,r3
+ 880:	1806d07a 	srli	r3,r3,1
+ 884:	280ad07a 	srli	r5,r5,1
+ 888:	183ffa1e 	bne	r3,zero,874 <__udivsi3+0x38>
+ 88c:	f800283a 	ret
+ 890:	0005883a 	mov	r2,zero
+ 894:	f800283a 	ret
+ 898:	00c00044 	movi	r3,1
+ 89c:	003ff406 	br	870 <__udivsi3+0x34>
 
-000005b4 <__umodsi3>:
- 5b4:	2005883a 	mov	r2,r4
- 5b8:	2900132e 	bgeu	r5,r4,608 <__umodsi3+0x54>
- 5bc:	28001216 	blt	r5,zero,608 <__umodsi3+0x54>
- 5c0:	01800804 	movi	r6,32
- 5c4:	00c00044 	movi	r3,1
- 5c8:	00000206 	br	5d4 <__umodsi3+0x20>
- 5cc:	30000c26 	beq	r6,zero,600 <__umodsi3+0x4c>
- 5d0:	28000516 	blt	r5,zero,5e8 <__umodsi3+0x34>
- 5d4:	294b883a 	add	r5,r5,r5
- 5d8:	31bfffc4 	addi	r6,r6,-1
- 5dc:	18c7883a 	add	r3,r3,r3
- 5e0:	293ffa36 	bltu	r5,r4,5cc <__umodsi3+0x18>
- 5e4:	18000626 	beq	r3,zero,600 <__umodsi3+0x4c>
- 5e8:	1806d07a 	srli	r3,r3,1
- 5ec:	11400136 	bltu	r2,r5,5f4 <__umodsi3+0x40>
- 5f0:	1145c83a 	sub	r2,r2,r5
- 5f4:	280ad07a 	srli	r5,r5,1
- 5f8:	183ffb1e 	bne	r3,zero,5e8 <__umodsi3+0x34>
- 5fc:	f800283a 	ret
- 600:	2005883a 	mov	r2,r4
- 604:	f800283a 	ret
- 608:	00c00044 	movi	r3,1
- 60c:	003ff606 	br	5e8 <__umodsi3+0x34>
+000008a0 <__umodsi3>:
+ 8a0:	2005883a 	mov	r2,r4
+ 8a4:	2900132e 	bgeu	r5,r4,8f4 <__umodsi3+0x54>
+ 8a8:	28001216 	blt	r5,zero,8f4 <__umodsi3+0x54>
+ 8ac:	01800804 	movi	r6,32
+ 8b0:	00c00044 	movi	r3,1
+ 8b4:	00000206 	br	8c0 <__umodsi3+0x20>
+ 8b8:	30000c26 	beq	r6,zero,8ec <__umodsi3+0x4c>
+ 8bc:	28000516 	blt	r5,zero,8d4 <__umodsi3+0x34>
+ 8c0:	294b883a 	add	r5,r5,r5
+ 8c4:	31bfffc4 	addi	r6,r6,-1
+ 8c8:	18c7883a 	add	r3,r3,r3
+ 8cc:	293ffa36 	bltu	r5,r4,8b8 <__umodsi3+0x18>
+ 8d0:	18000626 	beq	r3,zero,8ec <__umodsi3+0x4c>
+ 8d4:	1806d07a 	srli	r3,r3,1
+ 8d8:	11400136 	bltu	r2,r5,8e0 <__umodsi3+0x40>
+ 8dc:	1145c83a 	sub	r2,r2,r5
+ 8e0:	280ad07a 	srli	r5,r5,1
+ 8e4:	183ffb1e 	bne	r3,zero,8d4 <__umodsi3+0x34>
+ 8e8:	f800283a 	ret
+ 8ec:	2005883a 	mov	r2,r4
+ 8f0:	f800283a 	ret
+ 8f4:	00c00044 	movi	r3,1
+ 8f8:	003ff606 	br	8d4 <__umodsi3+0x34>
 
-00000610 <alt_ic_isr_register>:
+000008fc <alt_ic_isr_register>:
   * @return                 0 if successful, else error (-1)
   */
 int alt_ic_isr_register(alt_u32 ic_id, alt_u32 irq, alt_isr_func isr, 
   void *isr_context, void *flags)
 {
     return alt_iic_isr_register(ic_id, irq, isr, isr_context, flags);
- 610:	000069c1 	jmpi	69c <alt_iic_isr_register>
+ 8fc:	00009881 	jmpi	988 <alt_iic_isr_register>
 
-00000614 <alt_ic_irq_enable>:
+00000900 <alt_ic_irq_enable>:
   NIOS2_READ_STATUS (context);
- 614:	0007303a 	rdctl	r3,status
+ 900:	0007303a 	rdctl	r3,status
   NIOS2_WRITE_STATUS (context & ~NIOS2_STATUS_PIE_MSK);
- 618:	00bfff84 	movi	r2,-2
- 61c:	1884703a 	and	r2,r3,r2
- 620:	1001703a 	wrctl	status,r2
+ 904:	00bfff84 	movi	r2,-2
+ 908:	1884703a 	and	r2,r3,r2
+ 90c:	1001703a 	wrctl	status,r2
   alt_irq_context  status;
   extern volatile alt_u32 alt_irq_active;
 
   status = alt_irq_disable_all ();
 
   alt_irq_active |= (1 << id);
- 624:	00800044 	movi	r2,1
- 628:	d1200417 	ldw	r4,-32752(gp)
- 62c:	114a983a 	sll	r5,r2,r5
- 630:	290ab03a 	or	r5,r5,r4
- 634:	d1600415 	stw	r5,-32752(gp)
+ 910:	00800044 	movi	r2,1
+ 914:	d1200417 	ldw	r4,-32752(gp)
+ 918:	114a983a 	sll	r5,r2,r5
+ 91c:	290ab03a 	or	r5,r5,r4
+ 920:	d1600415 	stw	r5,-32752(gp)
   NIOS2_WRITE_IENABLE (alt_irq_active);
- 638:	d0a00417 	ldw	r2,-32752(gp)
- 63c:	100170fa 	wrctl	ienable,r2
+ 924:	d0a00417 	ldw	r2,-32752(gp)
+ 928:	100170fa 	wrctl	ienable,r2
   NIOS2_WRITE_STATUS (context);
- 640:	1801703a 	wrctl	status,r3
+ 92c:	1801703a 	wrctl	status,r3
   * @return                 0 if successful, else error (-1)
   */
 int alt_ic_irq_enable (alt_u32 ic_id, alt_u32 irq)
 {
     return alt_irq_enable(irq);
 }
- 644:	0005883a 	mov	r2,zero
- 648:	f800283a 	ret
+ 930:	0005883a 	mov	r2,zero
+ 934:	f800283a 	ret
 
-0000064c <alt_ic_irq_disable>:
+00000938 <alt_ic_irq_disable>:
   NIOS2_READ_STATUS (context);
- 64c:	0007303a 	rdctl	r3,status
+ 938:	0007303a 	rdctl	r3,status
   NIOS2_WRITE_STATUS (context & ~NIOS2_STATUS_PIE_MSK);
- 650:	00bfff84 	movi	r2,-2
- 654:	1884703a 	and	r2,r3,r2
- 658:	1001703a 	wrctl	status,r2
+ 93c:	00bfff84 	movi	r2,-2
+ 940:	1884703a 	and	r2,r3,r2
+ 944:	1001703a 	wrctl	status,r2
   alt_irq_active &= ~(1 << id);
- 65c:	00bfff84 	movi	r2,-2
- 660:	d1200417 	ldw	r4,-32752(gp)
- 664:	114a183a 	rol	r5,r2,r5
- 668:	290a703a 	and	r5,r5,r4
- 66c:	d1600415 	stw	r5,-32752(gp)
+ 948:	00bfff84 	movi	r2,-2
+ 94c:	d1200417 	ldw	r4,-32752(gp)
+ 950:	114a183a 	rol	r5,r2,r5
+ 954:	290a703a 	and	r5,r5,r4
+ 958:	d1600415 	stw	r5,-32752(gp)
   NIOS2_WRITE_IENABLE (alt_irq_active);
- 670:	d0a00417 	ldw	r2,-32752(gp)
- 674:	100170fa 	wrctl	ienable,r2
+ 95c:	d0a00417 	ldw	r2,-32752(gp)
+ 960:	100170fa 	wrctl	ienable,r2
   NIOS2_WRITE_STATUS (context);
- 678:	1801703a 	wrctl	status,r3
+ 964:	1801703a 	wrctl	status,r3
   * @return                 0 if successful, else error (-1)
   */
 int alt_ic_irq_disable(alt_u32 ic_id, alt_u32 irq)
 {
     return alt_irq_disable(irq);
 }
- 67c:	0005883a 	mov	r2,zero
- 680:	f800283a 	ret
+ 968:	0005883a 	mov	r2,zero
+ 96c:	f800283a 	ret
 
-00000684 <alt_ic_irq_enabled>:
+00000970 <alt_ic_irq_enabled>:
   */
 alt_u32 alt_ic_irq_enabled(alt_u32 ic_id, alt_u32 irq)
 {
     alt_u32 irq_enabled;
 
     NIOS2_READ_IENABLE(irq_enabled);
- 684:	000730fa 	rdctl	r3,ienable
+ 970:	000730fa 	rdctl	r3,ienable
 
     return (irq_enabled & (1 << irq)) ? 1: 0;
- 688:	00800044 	movi	r2,1
- 68c:	1144983a 	sll	r2,r2,r5
- 690:	10c4703a 	and	r2,r2,r3
+ 974:	00800044 	movi	r2,1
+ 978:	1144983a 	sll	r2,r2,r5
+ 97c:	10c4703a 	and	r2,r2,r3
 }
- 694:	1004c03a 	cmpne	r2,r2,zero
- 698:	f800283a 	ret
+ 980:	1004c03a 	cmpne	r2,r2,zero
+ 984:	f800283a 	ret
 
-0000069c <alt_iic_isr_register>:
+00000988 <alt_iic_isr_register>:
 {
   int rc = -EINVAL;  
   int id = irq;             /* IRQ interpreted as the interrupt ID. */
   alt_irq_context status;
 
   if (id < ALT_NIRQ)
- 69c:	28800808 	cmpgei	r2,r5,32
- 6a0:	1000161e 	bne	r2,zero,6fc <alt_iic_isr_register+0x60>
+ 988:	28800808 	cmpgei	r2,r5,32
+ 98c:	1000161e 	bne	r2,zero,9e8 <alt_iic_isr_register+0x60>
 {
- 6a4:	defffe04 	addi	sp,sp,-8
- 6a8:	dfc00115 	stw	ra,4(sp)
- 6ac:	dc000015 	stw	r16,0(sp)
+ 990:	defffe04 	addi	sp,sp,-8
+ 994:	dfc00115 	stw	ra,4(sp)
+ 998:	dc000015 	stw	r16,0(sp)
   NIOS2_READ_STATUS (context);
- 6b0:	0021303a 	rdctl	r16,status
+ 99c:	0021303a 	rdctl	r16,status
   NIOS2_WRITE_STATUS (context & ~NIOS2_STATUS_PIE_MSK);
- 6b4:	00bfff84 	movi	r2,-2
- 6b8:	8084703a 	and	r2,r16,r2
- 6bc:	1001703a 	wrctl	status,r2
+ 9a0:	00bfff84 	movi	r2,-2
+ 9a4:	8084703a 	and	r2,r16,r2
+ 9a8:	1001703a 	wrctl	status,r2
      * state.
      */
 
     status = alt_irq_disable_all();
 
     alt_irq[id].handler = isr;
- 6c0:	280690fa 	slli	r3,r5,3
- 6c4:	00800074 	movhi	r2,1
- 6c8:	10800e04 	addi	r2,r2,56
- 6cc:	10c5883a 	add	r2,r2,r3
- 6d0:	11800015 	stw	r6,0(r2)
+ 9ac:	280690fa 	slli	r3,r5,3
+ 9b0:	00800074 	movhi	r2,1
+ 9b4:	10800904 	addi	r2,r2,36
+ 9b8:	10c5883a 	add	r2,r2,r3
+ 9bc:	11800015 	stw	r6,0(r2)
     alt_irq[id].context = isr_context;
- 6d4:	11c00115 	stw	r7,4(r2)
+ 9c0:	11c00115 	stw	r7,4(r2)
 
     rc = (isr) ? alt_ic_irq_enable(ic_id, id) : alt_ic_irq_disable(ic_id, id);
- 6d8:	30000626 	beq	r6,zero,6f4 <alt_iic_isr_register+0x58>
- 6dc:	00006140 	call	614 <alt_ic_irq_enable>
+ 9c4:	30000626 	beq	r6,zero,9e0 <alt_iic_isr_register+0x58>
+ 9c8:	00009000 	call	900 <alt_ic_irq_enable>
   NIOS2_WRITE_STATUS (context);
- 6e0:	8001703a 	wrctl	status,r16
+ 9cc:	8001703a 	wrctl	status,r16
 
     alt_irq_enable_all(status);
   }
 
   return rc; 
 }
- 6e4:	dfc00117 	ldw	ra,4(sp)
- 6e8:	dc000017 	ldw	r16,0(sp)
- 6ec:	dec00204 	addi	sp,sp,8
- 6f0:	f800283a 	ret
+ 9d0:	dfc00117 	ldw	ra,4(sp)
+ 9d4:	dc000017 	ldw	r16,0(sp)
+ 9d8:	dec00204 	addi	sp,sp,8
+ 9dc:	f800283a 	ret
     rc = (isr) ? alt_ic_irq_enable(ic_id, id) : alt_ic_irq_disable(ic_id, id);
- 6f4:	000064c0 	call	64c <alt_ic_irq_disable>
- 6f8:	003ff906 	br	6e0 <alt_iic_isr_register+0x44>
+ 9e0:	00009380 	call	938 <alt_ic_irq_disable>
+ 9e4:	003ff906 	br	9cc <alt_iic_isr_register+0x44>
   int rc = -EINVAL;  
- 6fc:	00bffa84 	movi	r2,-22
+ 9e8:	00bffa84 	movi	r2,-22
 }
- 700:	f800283a 	ret
+ 9ec:	f800283a 	ret
 
-00000704 <alt_load>:
+000009f0 <alt_load>:
  * there is no bootloader, so this application is responsible for loading to
  * RAM any sections that are required.
  */  
 
 void alt_load (void)
 {
- 704:	deffff04 	addi	sp,sp,-4
+ 9f0:	deffff04 	addi	sp,sp,-4
 
 static void ALT_INLINE alt_load_section (alt_u32* from, 
                                          alt_u32* to, 
                                          alt_u32* end)
 {
   if (to != from)
- 708:	00800074 	movhi	r2,1
- 70c:	00c00034 	movhi	r3,0
- 710:	dfc00015 	stw	ra,0(sp)
- 714:	10800504 	addi	r2,r2,20
- 718:	18c22704 	addi	r3,r3,2204
- 71c:	10c00326 	beq	r2,r3,72c <alt_load+0x28>
+ 9f4:	00800074 	movhi	r2,1
+ 9f8:	00c00034 	movhi	r3,0
+ 9fc:	dfc00015 	stw	ra,0(sp)
+ a00:	10800004 	addi	r2,r2,0
+ a04:	18c2dd04 	addi	r3,r3,2932
+ a08:	10c00326 	beq	r2,r3,a18 <alt_load+0x28>
   {
     while( to != end )
- 720:	01000074 	movhi	r4,1
- 724:	21000604 	addi	r4,r4,24
- 728:	1100141e 	bne	r2,r4,77c <alt_load+0x78>
+ a0c:	01000074 	movhi	r4,1
+ a10:	21000104 	addi	r4,r4,4
+ a14:	1100141e 	bne	r2,r4,a68 <alt_load+0x78>
   if (to != from)
- 72c:	00800034 	movhi	r2,0
- 730:	00c00034 	movhi	r3,0
- 734:	10800804 	addi	r2,r2,32
- 738:	18c00804 	addi	r3,r3,32
- 73c:	10c00326 	beq	r2,r3,74c <alt_load+0x48>
+ a18:	00800034 	movhi	r2,0
+ a1c:	00c00034 	movhi	r3,0
+ a20:	10800804 	addi	r2,r2,32
+ a24:	18c00804 	addi	r3,r3,32
+ a28:	10c00326 	beq	r2,r3,a38 <alt_load+0x48>
     while( to != end )
- 740:	01000034 	movhi	r4,0
- 744:	21006004 	addi	r4,r4,384
- 748:	1100111e 	bne	r2,r4,790 <alt_load+0x8c>
+ a2c:	01000034 	movhi	r4,0
+ a30:	21006004 	addi	r4,r4,384
+ a34:	1100111e 	bne	r2,r4,a7c <alt_load+0x8c>
   if (to != from)
- 74c:	00800074 	movhi	r2,1
- 750:	00c00034 	movhi	r3,0
- 754:	10800004 	addi	r2,r2,0
- 758:	18c22204 	addi	r3,r3,2184
- 75c:	10c00326 	beq	r2,r3,76c <alt_load+0x68>
+ a38:	00800074 	movhi	r2,1
+ a3c:	00c00034 	movhi	r3,0
+ a40:	10800004 	addi	r2,r2,0
+ a44:	18c2dd04 	addi	r3,r3,2932
+ a48:	10c00326 	beq	r2,r3,a58 <alt_load+0x68>
     while( to != end )
- 760:	01000074 	movhi	r4,1
- 764:	21000504 	addi	r4,r4,20
- 768:	11000e1e 	bne	r2,r4,7a4 <alt_load+0xa0>
+ a4c:	01000074 	movhi	r4,1
+ a50:	21000004 	addi	r4,r4,0
+ a54:	11000e1e 	bne	r2,r4,a90 <alt_load+0xa0>
   
   /*
    * Now ensure that the caches are in synch.
    */
   
   alt_dcache_flush_all();
- 76c:	00008080 	call	808 <alt_dcache_flush_all>
+ a58:	0000af40 	call	af4 <alt_dcache_flush_all>
   alt_icache_flush_all();
 }
- 770:	dfc00017 	ldw	ra,0(sp)
- 774:	dec00104 	addi	sp,sp,4
+ a5c:	dfc00017 	ldw	ra,0(sp)
+ a60:	dec00104 	addi	sp,sp,4
   alt_icache_flush_all();
- 778:	000080c1 	jmpi	80c <alt_icache_flush_all>
+ a64:	0000af81 	jmpi	af8 <alt_icache_flush_all>
     {
       *to++ = *from++;
- 77c:	19400017 	ldw	r5,0(r3)
- 780:	10800104 	addi	r2,r2,4
- 784:	18c00104 	addi	r3,r3,4
- 788:	117fff15 	stw	r5,-4(r2)
- 78c:	003fe606 	br	728 <alt_load+0x24>
- 790:	19400017 	ldw	r5,0(r3)
- 794:	10800104 	addi	r2,r2,4
- 798:	18c00104 	addi	r3,r3,4
- 79c:	117fff15 	stw	r5,-4(r2)
- 7a0:	003fe906 	br	748 <alt_load+0x44>
- 7a4:	19400017 	ldw	r5,0(r3)
- 7a8:	10800104 	addi	r2,r2,4
- 7ac:	18c00104 	addi	r3,r3,4
- 7b0:	117fff15 	stw	r5,-4(r2)
- 7b4:	003fec06 	br	768 <alt_load+0x64>
+ a68:	19400017 	ldw	r5,0(r3)
+ a6c:	10800104 	addi	r2,r2,4
+ a70:	18c00104 	addi	r3,r3,4
+ a74:	117fff15 	stw	r5,-4(r2)
+ a78:	003fe606 	br	a14 <alt_load+0x24>
+ a7c:	19400017 	ldw	r5,0(r3)
+ a80:	10800104 	addi	r2,r2,4
+ a84:	18c00104 	addi	r3,r3,4
+ a88:	117fff15 	stw	r5,-4(r2)
+ a8c:	003fe906 	br	a34 <alt_load+0x44>
+ a90:	19400017 	ldw	r5,0(r3)
+ a94:	10800104 	addi	r2,r2,4
+ a98:	18c00104 	addi	r3,r3,4
+ a9c:	117fff15 	stw	r5,-4(r2)
+ aa0:	003fec06 	br	a54 <alt_load+0x64>
 
-000007b8 <alt_main>:
+00000aa4 <alt_main>:
  * devices/filesystems/components in the system; and call the entry point for
  * the users application, i.e. main().
  */
 
 void alt_main (void)
 {
- 7b8:	deffff04 	addi	sp,sp,-4
+ aa4:	deffff04 	addi	sp,sp,-4
 #endif
 
   /* ALT LOG - please see HAL/sys/alt_log_printf.h for details */
   ALT_LOG_PRINT_BOOT("[alt_main.c] Entering alt_main, calling alt_irq_init.\r\n");
   /* Initialize the interrupt controller. */
   alt_irq_init (NULL);
- 7bc:	0009883a 	mov	r4,zero
+ aa8:	0009883a 	mov	r4,zero
 {
- 7c0:	dfc00015 	stw	ra,0(sp)
+ aac:	dfc00015 	stw	ra,0(sp)
   alt_irq_init (NULL);
- 7c4:	00007e40 	call	7e4 <alt_irq_init>
+ ab0:	0000ad00 	call	ad0 <alt_irq_init>
   ALT_LOG_PRINT_BOOT("[alt_main.c] Done OS Init, calling alt_sem_create.\r\n");
   ALT_SEM_CREATE (&alt_fd_list_lock, 1);
 
   /* Initialize the device drivers/software components. */
   ALT_LOG_PRINT_BOOT("[alt_main.c] Calling alt_sys_init.\r\n");
   alt_sys_init();
- 7c8:	00008040 	call	804 <alt_sys_init>
+ ab4:	0000af00 	call	af0 <alt_sys_init>
    */
 
   ALT_LOG_PRINT_BOOT("[alt_main.c] Calling main.\r\n");
 
 #ifdef ALT_NO_EXIT
   main (alt_argc, alt_argv, alt_envp);
- 7cc:	d1a00517 	ldw	r6,-32748(gp)
- 7d0:	d1600617 	ldw	r5,-32744(gp)
- 7d4:	d1200717 	ldw	r4,-32740(gp)
+ ab8:	d1a00517 	ldw	r6,-32748(gp)
+ abc:	d1600617 	ldw	r5,-32744(gp)
+ ac0:	d1200717 	ldw	r4,-32740(gp)
   close(STDOUT_FILENO);
   exit (result);
 #endif
 
   ALT_LOG_PRINT_BOOT("[alt_main.c] After main - we should not be here?.\r\n");
 }
- 7d8:	dfc00017 	ldw	ra,0(sp)
- 7dc:	dec00104 	addi	sp,sp,4
+ ac4:	dfc00017 	ldw	ra,0(sp)
+ ac8:	dec00104 	addi	sp,sp,4
   main (alt_argc, alt_argv, alt_envp);
- 7e0:	00003d01 	jmpi	3d0 <main>
+ acc:	000066c1 	jmpi	66c <main>
 
-000007e4 <alt_irq_init>:
+00000ad0 <alt_irq_init>:
  * The "base" parameter is ignored and only
  * present for backwards-compatibility.
  */
 
 void alt_irq_init ( const void* base )
 {
- 7e4:	deffff04 	addi	sp,sp,-4
- 7e8:	dfc00015 	stw	ra,0(sp)
+ ad0:	deffff04 	addi	sp,sp,-4
+ ad4:	dfc00015 	stw	ra,0(sp)
     ALTERA_NIOS2_GEN2_IRQ_INIT ( CPU, cpu);
- 7ec:	00008800 	call	880 <altera_nios2_gen2_irq_init>
+ ad8:	0000b6c0 	call	b6c <altera_nios2_gen2_irq_init>
     NIOS2_WRITE_STATUS(NIOS2_STATUS_PIE_MSK
- 7f0:	00800044 	movi	r2,1
- 7f4:	1001703a 	wrctl	status,r2
+ adc:	00800044 	movi	r2,1
+ ae0:	1001703a 	wrctl	status,r2
     alt_irq_cpu_enable_interrupts();
 }
- 7f8:	dfc00017 	ldw	ra,0(sp)
- 7fc:	dec00104 	addi	sp,sp,4
- 800:	f800283a 	ret
+ ae4:	dfc00017 	ldw	ra,0(sp)
+ ae8:	dec00104 	addi	sp,sp,4
+ aec:	f800283a 	ret
 
-00000804 <alt_sys_init>:
+00000af0 <alt_sys_init>:
 void alt_sys_init( void )
 {
     ALTERA_AVALON_TIMER_INIT ( TIMER_MIN, timer_min);
     ALTERA_AVALON_TIMER_INIT ( TIMER_MS, timer_MS);
     ALTERA_AVALON_TIMER_INIT ( TIMER_S, timer_S);
 }
- 804:	f800283a 	ret
+ af0:	f800283a 	ret
 
-00000808 <alt_dcache_flush_all>:
+00000af4 <alt_dcache_flush_all>:
   for (i = (char*) 0; i < (char*) NIOS2_DCACHE_SIZE; i+= NIOS2_DCACHE_LINE_SIZE)
   { 
     __asm__ volatile ("flushd (%0)" :: "r" (i));
   }
 #endif /* NIOS2_DCACHE_SIZE > 0 */
 }
- 808:	f800283a 	ret
+ af4:	f800283a 	ret
 
-0000080c <alt_icache_flush_all>:
+00000af8 <alt_icache_flush_all>:
 void alt_icache_flush_all (void)
 {
 #if NIOS2_ICACHE_SIZE > 0
   alt_icache_flush (0, NIOS2_ICACHE_SIZE);
 #endif
 }
- 80c:	f800283a 	ret
+ af8:	f800283a 	ret
 
-00000810 <alt_exception_cause_generated_bad_addr>:
+00000afc <alt_exception_cause_generated_bad_addr>:
  *         0: BADADDR is not valid
  */
 int 
 alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
 {
   switch (cause) {
- 810:	213ffe84 	addi	r4,r4,-6
- 814:	20800428 	cmpgeui	r2,r4,16
- 818:	1000151e 	bne	r2,zero,870 <alt_exception_cause_generated_bad_addr+0x60>
- 81c:	200890ba 	slli	r4,r4,2
- 820:	00800034 	movhi	r2,0
- 824:	2085883a 	add	r2,r4,r2
- 828:	10820c17 	ldw	r2,2096(r2)
- 82c:	1000683a 	jmp	r2
- 830:	00000878 	rdprs	zero,zero,33
- 834:	00000878 	rdprs	zero,zero,33
- 838:	00000870 	cmpltui	zero,zero,33
- 83c:	00000870 	cmpltui	zero,zero,33
- 840:	00000870 	cmpltui	zero,zero,33
- 844:	00000878 	rdprs	zero,zero,33
- 848:	00000870 	cmpltui	zero,zero,33
- 84c:	00000870 	cmpltui	zero,zero,33
- 850:	00000878 	rdprs	zero,zero,33
- 854:	00000878 	rdprs	zero,zero,33
- 858:	00000870 	cmpltui	zero,zero,33
- 85c:	00000878 	rdprs	zero,zero,33
- 860:	00000870 	cmpltui	zero,zero,33
- 864:	00000870 	cmpltui	zero,zero,33
- 868:	00000870 	cmpltui	zero,zero,33
- 86c:	00000878 	rdprs	zero,zero,33
+ afc:	213ffe84 	addi	r4,r4,-6
+ b00:	20800428 	cmpgeui	r2,r4,16
+ b04:	1000151e 	bne	r2,zero,b5c <alt_exception_cause_generated_bad_addr+0x60>
+ b08:	200890ba 	slli	r4,r4,2
+ b0c:	00800034 	movhi	r2,0
+ b10:	2085883a 	add	r2,r4,r2
+ b14:	1082c717 	ldw	r2,2844(r2)
+ b18:	1000683a 	jmp	r2
+ b1c:	00000b64 	muli	zero,zero,45
+ b20:	00000b64 	muli	zero,zero,45
+ b24:	00000b5c 	xori	zero,zero,45
+ b28:	00000b5c 	xori	zero,zero,45
+ b2c:	00000b5c 	xori	zero,zero,45
+ b30:	00000b64 	muli	zero,zero,45
+ b34:	00000b5c 	xori	zero,zero,45
+ b38:	00000b5c 	xori	zero,zero,45
+ b3c:	00000b64 	muli	zero,zero,45
+ b40:	00000b64 	muli	zero,zero,45
+ b44:	00000b5c 	xori	zero,zero,45
+ b48:	00000b64 	muli	zero,zero,45
+ b4c:	00000b5c 	xori	zero,zero,45
+ b50:	00000b5c 	xori	zero,zero,45
+ b54:	00000b5c 	xori	zero,zero,45
+ b58:	00000b64 	muli	zero,zero,45
   case NIOS2_EXCEPTION_MISALIGNED_TARGET_PC:
   case NIOS2_EXCEPTION_TLB_READ_PERM_VIOLATION:
   case NIOS2_EXCEPTION_TLB_WRITE_PERM_VIOLATION:
   case NIOS2_EXCEPTION_MPU_DATA_REGION_VIOLATION:
   case NIOS2_EXCEPTION_ECC_DATA_ERR:
     return 1;
- 870:	0005883a 	mov	r2,zero
- 874:	f800283a 	ret
- 878:	00800044 	movi	r2,1
+ b5c:	0005883a 	mov	r2,zero
+ b60:	f800283a 	ret
+ b64:	00800044 	movi	r2,1
     return 0;
 
   default:
     return 0;
   }
 }
- 87c:	f800283a 	ret
+ b68:	f800283a 	ret
 
-00000880 <altera_nios2_gen2_irq_init>:
+00000b6c <altera_nios2_gen2_irq_init>:
  * To initialize the internal interrupt controller, just clear the IENABLE
  * register so that all possible IRQs are disabled.
  */
 void altera_nios2_gen2_irq_init(void) 
 {
     NIOS2_WRITE_IENABLE(0);
- 880:	000170fa 	wrctl	ienable,zero
+ b6c:	000170fa 	wrctl	ienable,zero
 }
- 884:	f800283a 	ret
+ b70:	f800283a 	ret
