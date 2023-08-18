@@ -1,0 +1,581 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+                              obj/default/hello_world_small.o (__divsi3)
+../cronometrof_bsp//libhal_bsp.a(alt_iic.o)
+                              obj/default/hello_world_small.o (alt_ic_isr_register)
+../cronometrof_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+                              ../cronometrof_bsp//libhal_bsp.a(alt_iic.o) (alt_iic_isr_register)
+../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+                              ../cronometrof_bsp//libhal_bsp.a(alt_iic_isr_register.o) (alt_irq_entry)
+../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+                              ../cronometrof_bsp//libhal_bsp.a(alt_iic_isr_register.o) (alt_irq_handler)
+../cronometrof_bsp//libhal_bsp.a(alt_irq_vars.o)
+                              ../cronometrof_bsp//libhal_bsp.a(alt_iic.o) (alt_irq_active)
+../cronometrof_bsp//libhal_bsp.a(alt_load.o)
+                              ../cronometrof_bsp//obj/HAL/src/crt0.o (alt_load)
+../cronometrof_bsp//libhal_bsp.a(alt_main.o)
+                              ../cronometrof_bsp//obj/HAL/src/crt0.o (alt_main)
+../cronometrof_bsp//libhal_bsp.a(alt_sys_init.o)
+                              ../cronometrof_bsp//libhal_bsp.a(alt_main.o) (alt_irq_init)
+../cronometrof_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                              ../cronometrof_bsp//libhal_bsp.a(alt_load.o) (alt_dcache_flush_all)
+../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+                              ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o) (alt_exception)
+../cronometrof_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                              ../cronometrof_bsp//libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
+../cronometrof_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                              ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o) (alt_instruction_exception_entry)
+../cronometrof_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                              ../cronometrof_bsp//libhal_bsp.a(alt_sys_init.o) (altera_nios2_gen2_irq_init)
+
+Allocating common symbols
+Common symbol       size              file
+
+alt_irq             0x100             ../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+reset            0x0000000000000000 0x0000000000000020
+ROM              0x0000000000000020 0x0000000000000fe0
+RAM              0x0000000000010000 0x0000000000001000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ../cronometrof_bsp//obj/HAL/src/crt0.o
+LOAD obj/default/hello_world_small.o
+LOAD /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libstdc++.a
+LOAD /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libm.a
+LOAD /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a
+START GROUP
+LOAD /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a
+LOAD /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a
+LOAD ../cronometrof_bsp//libhal_bsp.a
+LOAD /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libm.a
+END GROUP
+LOAD /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a
+                0x0000000000000000                __alt_mem_ROM = 0x0
+                0x0000000000010000                __alt_mem_RAM = 0x10000
+
+.entry          0x0000000000000000       0x20
+ *(.entry)
+ .entry         0x0000000000000000       0x20 ../cronometrof_bsp//obj/HAL/src/crt0.o
+                0x0000000000000000                __reset
+                0x000000000000000c                _exit
+
+.exceptions     0x0000000000000020      0x160
+                0x0000000000000020                PROVIDE (__ram_exceptions_start = ABSOLUTE (.))
+                0x0000000000000020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ .exceptions.entry.label
+                0x0000000000000020        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+                0x0000000000000020                alt_irq_entry
+ .exceptions.entry.label
+                0x0000000000000020        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+                0x0000000000000020                alt_exception
+ *(.exceptions.entry.user)
+ *(.exceptions.entry.ecc_fatal)
+ *(.exceptions.entry)
+ .exceptions.entry
+                0x0000000000000020       0x54 ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ .exceptions.irqtest
+                0x0000000000000074       0x10 ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ .exceptions.irqhandler
+                0x0000000000000084        0x4 ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ .exceptions.irqreturn
+                0x0000000000000088        0x4 ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.label)
+ .exceptions.notirq.label
+                0x000000000000008c        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ .exceptions.notirq
+                0x000000000000008c        0x8 ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ .exceptions.unknown
+                0x0000000000000094       0x14 ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.label)
+ .exceptions.exit.label
+                0x00000000000000a8        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .exceptions.exit.label
+                0x00000000000000a8        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ .exceptions.exit
+                0x00000000000000a8       0x54 ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions)
+ .exceptions    0x00000000000000fc       0x60 ../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+                0x00000000000000fc                alt_irq_handler
+ .exceptions    0x000000000000015c       0x24 ../cronometrof_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x000000000000015c                alt_instruction_exception_entry
+                0x0000000000000180                PROVIDE (__ram_exceptions_end = ABSOLUTE (.))
+                0x0000000000000020                PROVIDE (__flash_exceptions_start = LOADADDR (.exceptions))
+
+.text           0x0000000000000180      0xa80
+                [!provide]                        PROVIDE (stext = ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000000180       0x3c ../cronometrof_bsp//obj/HAL/src/crt0.o
+                0x0000000000000180                _start
+ .text          0x00000000000001bc      0x530 obj/default/hello_world_small.o
+ .text.startup  0x00000000000006ec       0xe8 obj/default/hello_world_small.o
+                0x00000000000006ec                main
+ .text          0x00000000000007d4      0x1b4 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+                0x00000000000007d4                __divsi3
+                0x0000000000000854                __modsi3
+                0x00000000000008c8                __udivsi3
+                0x000000000000092c                __umodsi3
+ .text          0x0000000000000988       0x8c ../cronometrof_bsp//libhal_bsp.a(alt_iic.o)
+                0x0000000000000988                alt_ic_isr_register
+                0x000000000000098c                alt_ic_irq_enable
+                0x00000000000009c4                alt_ic_irq_disable
+                0x00000000000009fc                alt_ic_irq_enabled
+ .text          0x0000000000000a14       0x68 ../cronometrof_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+                0x0000000000000a14                alt_iic_isr_register
+ .text          0x0000000000000a7c        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .text          0x0000000000000a7c        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .text          0x0000000000000a7c        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .text          0x0000000000000a7c       0xb4 ../cronometrof_bsp//libhal_bsp.a(alt_load.o)
+                0x0000000000000a7c                alt_load
+ .text          0x0000000000000b30       0x2c ../cronometrof_bsp//libhal_bsp.a(alt_main.o)
+                0x0000000000000b30                alt_main
+ .text          0x0000000000000b5c       0x24 ../cronometrof_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x0000000000000b5c                alt_irq_init
+                0x0000000000000b7c                alt_sys_init
+ .text          0x0000000000000b80        0x4 ../cronometrof_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000000000000b80                alt_dcache_flush_all
+ .text          0x0000000000000b84        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .text          0x0000000000000b84        0x4 ../cronometrof_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                0x0000000000000b84                alt_icache_flush_all
+ .text          0x0000000000000b88       0x70 ../cronometrof_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000000000b88                alt_exception_cause_generated_bad_addr
+ .text          0x0000000000000bf8        0x8 ../cronometrof_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000000000bf8                altera_nios2_gen2_irq_init
+ *(.gnu.warning.*)
+ *(.fini)
+                [!provide]                        PROVIDE (__etext = ABSOLUTE (.))
+                [!provide]                        PROVIDE (_etext = ABSOLUTE (.))
+                [!provide]                        PROVIDE (etext = ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x0000000000000c00                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__preinit_array_start = ABSOLUTE (.))
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (__init_array_start = ABSOLUTE (.))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (__fini_array_start = ABSOLUTE (.))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end = ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table .gcc_except_table.*)
+ *(.dynamic)
+                [!provide]                        PROVIDE (__CTOR_LIST__ = ABSOLUTE (.))
+ *(.ctors)
+ *(SORT_BY_NAME(.ctors.*))
+                [!provide]                        PROVIDE (__CTOR_END__ = ABSOLUTE (.))
+                [!provide]                        PROVIDE (__DTOR_LIST__ = ABSOLUTE (.))
+ *(.dtors)
+ *(SORT_BY_NAME(.dtors.*))
+                [!provide]                        PROVIDE (__DTOR_END__ = ABSOLUTE (.))
+ *(.jcr)
+                0x0000000000000c00                . = ALIGN (0x4)
+
+.rodata         0x0000000000010000        0x0 load address 0x0000000000000c00
+                0x0000000000010000                PROVIDE (__ram_rodata_start = ABSOLUTE (.))
+                0x0000000000010000                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ *(.rodata1)
+                0x0000000000010000                . = ALIGN (0x4)
+                0x0000000000010000                PROVIDE (__ram_rodata_end = ABSOLUTE (.))
+                0x0000000000000c00                PROVIDE (__flash_rodata_start = LOADADDR (.rodata))
+
+.rwdata         0x0000000000010000        0x4 load address 0x0000000000000c00
+                0x0000000000010000                PROVIDE (__ram_rwdata_start = ABSOLUTE (.))
+                0x0000000000010000                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0000000000010000        0x0 ../cronometrof_bsp//obj/HAL/src/crt0.o
+ .data          0x0000000000010000        0x0 obj/default/hello_world_small.o
+ .data          0x0000000000010000        0x0 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .data          0x0000000000010000        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_iic.o)
+ .data          0x0000000000010000        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .data          0x0000000000010000        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .data          0x0000000000010000        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .data          0x0000000000010000        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .data          0x0000000000010000        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_load.o)
+ .data          0x0000000000010000        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_main.o)
+ .data          0x0000000000010000        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_sys_init.o)
+ .data          0x0000000000010000        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x0000000000010000        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .data          0x0000000000010000        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x0000000000010000        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .data          0x0000000000010000        0x0 ../cronometrof_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000000018000                _gp = ABSOLUTE ((. + 0x8000))
+                [!provide]                        PROVIDE (gp = _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x0000000000010000        0x4 ../cronometrof_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x0000000000010000                alt_priority_mask
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x0000000000010004                . = ALIGN (0x4)
+                0x0000000000010004                _edata = ABSOLUTE (.)
+                [!provide]                        PROVIDE (edata = ABSOLUTE (.))
+                0x0000000000010004                PROVIDE (__ram_rwdata_end = ABSOLUTE (.))
+                0x0000000000000c00                PROVIDE (__flash_rwdata_start = LOADADDR (.rwdata))
+
+.bss            0x0000000000010004      0x124 load address 0x0000000000000c04
+                0x0000000000010004                __bss_start = ABSOLUTE (.)
+                [!provide]                        PROVIDE (__sbss_start = ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_start = ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x0000000000010004       0x10 obj/default/hello_world_small.o
+                0x0000000000010004                init
+ .sbss          0x0000000000010014        0x4 ../cronometrof_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x0000000000010014                alt_irq_active
+ .sbss          0x0000000000010018        0xc ../cronometrof_bsp//libhal_bsp.a(alt_main.o)
+                0x0000000000010018                alt_envp
+                0x000000000001001c                alt_argv
+                0x0000000000010020                alt_argc
+ .sbss          0x0000000000010024        0x4 ../cronometrof_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000000010024                alt_instruction_exception_handler
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                [!provide]                        PROVIDE (__sbss_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_end = ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000000000010028        0x0 ../cronometrof_bsp//obj/HAL/src/crt0.o
+ .bss           0x0000000000010028        0x0 obj/default/hello_world_small.o
+ .bss           0x0000000000010028        0x0 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .bss           0x0000000000010028        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_iic.o)
+ .bss           0x0000000000010028        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .bss           0x0000000000010028        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x0000000000010028        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x0000000000010028        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x0000000000010028        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_load.o)
+ .bss           0x0000000000010028        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_main.o)
+ .bss           0x0000000000010028        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_sys_init.o)
+ .bss           0x0000000000010028        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x0000000000010028        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x0000000000010028        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x0000000000010028        0x0 ../cronometrof_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .bss           0x0000000000010028        0x0 ../cronometrof_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ *(COMMON)
+ COMMON         0x0000000000010028      0x100 ../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+                0x0000000000010028                alt_irq
+                0x0000000000010128                . = ALIGN (0x4)
+                0x0000000000010128                __bss_end = ABSOLUTE (.)
+
+.ROM            0x0000000000000c04        0x0
+                [!provide]                        PROVIDE (_alt_partition_ROM_start = ABSOLUTE (.))
+ *(.ROM .ROM. ROM.*)
+                0x0000000000000c04                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_alt_partition_ROM_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (_alt_partition_ROM_load_addr = LOADADDR (.ROM))
+
+.RAM            0x0000000000010128        0x0 load address 0x0000000000000c04
+                [!provide]                        PROVIDE (_alt_partition_RAM_start = ABSOLUTE (.))
+ *(.RAM .RAM. RAM.*)
+                0x0000000000010128                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_alt_partition_RAM_end = ABSOLUTE (.))
+                0x0000000000010128                _end = ABSOLUTE (.)
+                0x0000000000010128                end = ABSOLUTE (.)
+                0x0000000000010128                __alt_stack_base = ABSOLUTE (.)
+                [!provide]                        PROVIDE (_alt_partition_RAM_load_addr = LOADADDR (.RAM))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x2c
+ *(.comment)
+ .comment       0x0000000000000000       0x2c obj/default/hello_world_small.o
+                                         0x2d (size before relaxing)
+ .comment       0x000000000000002c       0x2d /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .comment       0x000000000000002c       0x2d ../cronometrof_bsp//libhal_bsp.a(alt_iic.o)
+ .comment       0x000000000000002c       0x2d ../cronometrof_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .comment       0x000000000000002c       0x2d ../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .comment       0x000000000000002c       0x2d ../cronometrof_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .comment       0x000000000000002c       0x2d ../cronometrof_bsp//libhal_bsp.a(alt_load.o)
+ .comment       0x000000000000002c       0x2d ../cronometrof_bsp//libhal_bsp.a(alt_main.o)
+ .comment       0x000000000000002c       0x2d ../cronometrof_bsp//libhal_bsp.a(alt_sys_init.o)
+ .comment       0x000000000000002c       0x2d ../cronometrof_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x000000000000002c       0x2d ../cronometrof_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .comment       0x000000000000002c       0x2d ../cronometrof_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .comment       0x000000000000002c       0x2d ../cronometrof_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x238
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x28 ../cronometrof_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x0000000000000028       0x28 obj/default/hello_world_small.o
+ .debug_aranges
+                0x0000000000000050       0x20 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_aranges
+                0x0000000000000070       0x20 ../cronometrof_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_aranges
+                0x0000000000000090       0x20 ../cronometrof_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_aranges
+                0x00000000000000b0       0x30 ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_aranges
+                0x00000000000000e0       0x20 ../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_aranges
+                0x0000000000000100       0x18 ../cronometrof_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_aranges
+                0x0000000000000118       0x20 ../cronometrof_bsp//libhal_bsp.a(alt_load.o)
+ .debug_aranges
+                0x0000000000000138       0x20 ../cronometrof_bsp//libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x0000000000000158       0x20 ../cronometrof_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x0000000000000178       0x20 ../cronometrof_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x0000000000000198       0x38 ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_aranges
+                0x00000000000001d0       0x20 ../cronometrof_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x00000000000001f0       0x28 ../cronometrof_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_aranges
+                0x0000000000000218       0x20 ../cronometrof_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x742c
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0x22 ../cronometrof_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x0000000000000022      0xc43 obj/default/hello_world_small.o
+ .debug_info    0x0000000000000c65      0x368 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_info    0x0000000000000fcd      0xca2 ../cronometrof_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_info    0x0000000000001c6f      0xb3a ../cronometrof_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_info    0x00000000000027a9       0x22 ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x00000000000027cb      0xa61 ../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x000000000000322c       0x8b ../cronometrof_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x00000000000032b7      0xaed ../cronometrof_bsp//libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000000000003da4      0xeb0 ../cronometrof_bsp//libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000000000004c54      0x9ea ../cronometrof_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x000000000000563e      0x934 ../cronometrof_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x0000000000005f72       0x22 ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x0000000000005f94      0x934 ../cronometrof_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x00000000000068c8      0x20f ../cronometrof_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_info    0x0000000000006ad7      0x955 ../cronometrof_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+
+.debug_abbrev   0x0000000000000000     0x1aec
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x12 ../cronometrof_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x0000000000000012      0x2e7 obj/default/hello_world_small.o
+ .debug_abbrev  0x00000000000002f9      0x103 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_abbrev  0x00000000000003fc      0x31f ../cronometrof_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_abbrev  0x000000000000071b      0x303 ../cronometrof_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_abbrev  0x0000000000000a1e       0x12 ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x0000000000000a30      0x283 ../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x0000000000000cb3       0x44 ../cronometrof_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x0000000000000cf7      0x277 ../cronometrof_bsp//libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x0000000000000f6e      0x252 ../cronometrof_bsp//libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x00000000000011c0      0x25f ../cronometrof_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x000000000000141f      0x1e0 ../cronometrof_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x00000000000015ff       0x12 ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x0000000000001611      0x1e0 ../cronometrof_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x00000000000017f1      0x116 ../cronometrof_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_abbrev  0x0000000000001907      0x1e5 ../cronometrof_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+
+.debug_line     0x0000000000000000     0x1ee9
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0x66 ../cronometrof_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x0000000000000066      0x5cb obj/default/hello_world_small.o
+ .debug_line    0x0000000000000631      0x2f9 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_line    0x000000000000092a      0x297 ../cronometrof_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_line    0x0000000000000bc1      0x251 ../cronometrof_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x0000000000000e12       0x6b ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x0000000000000e7d      0x21f ../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x000000000000109c       0x50 ../cronometrof_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x00000000000010ec      0x285 ../cronometrof_bsp//libhal_bsp.a(alt_load.o)
+ .debug_line    0x0000000000001371      0x341 ../cronometrof_bsp//libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000000000016b2      0x1f0 ../cronometrof_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x00000000000018a2      0x1a9 ../cronometrof_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x0000000000001a4b       0xb3 ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x0000000000001afe      0x1a7 ../cronometrof_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000000000001ca5       0xee ../cronometrof_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_line    0x0000000000001d93      0x156 ../cronometrof_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+
+.debug_frame    0x0000000000000000      0x2dc
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0xa8 obj/default/hello_world_small.o
+ .debug_frame   0x00000000000000a8       0x50 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_frame   0x00000000000000f8       0x50 ../cronometrof_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_frame   0x0000000000000148       0x38 ../cronometrof_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_frame   0x0000000000000180       0x34 ../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x00000000000001b4       0x30 ../cronometrof_bsp//libhal_bsp.a(alt_load.o)
+ .debug_frame   0x00000000000001e4       0x2c ../cronometrof_bsp//libhal_bsp.a(alt_main.o)
+ .debug_frame   0x0000000000000210       0x3c ../cronometrof_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x000000000000024c       0x20 ../cronometrof_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x000000000000026c       0x20 ../cronometrof_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x000000000000028c       0x30 ../cronometrof_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_frame   0x00000000000002bc       0x20 ../cronometrof_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+
+.debug_str      0x0000000000000000     0x11fc
+ *(.debug_str)
+ .debug_str     0x0000000000000000       0x56 ../cronometrof_bsp//obj/HAL/src/crt0.o
+ .debug_str     0x0000000000000056      0x57e obj/default/hello_world_small.o
+                                        0x614 (size before relaxing)
+ .debug_str     0x00000000000005d4      0x194 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+                                        0x1df (size before relaxing)
+ .debug_str     0x0000000000000768       0xf2 ../cronometrof_bsp//libhal_bsp.a(alt_iic.o)
+                                        0x635 (size before relaxing)
+ .debug_str     0x000000000000085a       0x37 ../cronometrof_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+                                        0x601 (size before relaxing)
+ .debug_str     0x0000000000000891       0x18 ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+                                         0x5f (size before relaxing)
+ .debug_str     0x00000000000008a9       0x3a ../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+                                        0x58b (size before relaxing)
+ .debug_str     0x00000000000008e3       0x29 ../cronometrof_bsp//libhal_bsp.a(alt_irq_vars.o)
+                                        0x141 (size before relaxing)
+ .debug_str     0x000000000000090c      0x11d ../cronometrof_bsp//libhal_bsp.a(alt_load.o)
+                                        0x623 (size before relaxing)
+ .debug_str     0x0000000000000a29      0x23d ../cronometrof_bsp//libhal_bsp.a(alt_main.o)
+                                        0x7d5 (size before relaxing)
+ .debug_str     0x0000000000000c66       0x8f ../cronometrof_bsp//libhal_bsp.a(alt_sys_init.o)
+                                        0x5cb (size before relaxing)
+ .debug_str     0x0000000000000cf5       0x1f ../cronometrof_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                                        0x53c (size before relaxing)
+ .debug_str     0x0000000000000d14       0x1e ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+                                         0x65 (size before relaxing)
+ .debug_str     0x0000000000000d32       0x1f ../cronometrof_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                                        0x53c (size before relaxing)
+ .debug_str     0x0000000000000d51      0x48b ../cronometrof_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                                        0x5a7 (size before relaxing)
+ .debug_str     0x00000000000011dc       0x20 ../cronometrof_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                                        0x550 (size before relaxing)
+
+.debug_loc      0x0000000000000000     0x101b
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0x460 obj/default/hello_world_small.o
+ .debug_loc     0x0000000000000460      0x5d0 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_loc     0x0000000000000a30      0x205 ../cronometrof_bsp//libhal_bsp.a(alt_iic.o)
+ .debug_loc     0x0000000000000c35      0x23c ../cronometrof_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_loc     0x0000000000000e71       0xac ../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_loc     0x0000000000000f1d       0x66 ../cronometrof_bsp//libhal_bsp.a(alt_load.o)
+ .debug_loc     0x0000000000000f83       0x25 ../cronometrof_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x0000000000000fa8       0x73 ../cronometrof_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x0000000000000000       0x10
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x0000000000000000       0x10 ../cronometrof_bsp//obj/HAL/src/crt0.o
+                0x0000000000011000                __alt_data_end = 0x11000
+                0x0000000000011000                PROVIDE (__alt_stack_pointer = __alt_data_end)
+                [!provide]                        PROVIDE (__alt_stack_limit = __alt_stack_base)
+                [!provide]                        PROVIDE (__alt_heap_start = end)
+                [!provide]                        PROVIDE (__alt_heap_limit = 0x11000)
+OUTPUT(cronometrof.elf elf32-littlenios2)
+
+.debug_ranges   0x0000000000000000      0x1f8
+ .debug_ranges  0x0000000000000000       0x20 ../cronometrof_bsp//obj/HAL/src/crt0.o
+ .debug_ranges  0x0000000000000020       0x18 obj/default/hello_world_small.o
+ .debug_ranges  0x0000000000000038       0x70 /home/hrlds/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/9.2.1/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_ranges  0x00000000000000a8       0x18 ../cronometrof_bsp//libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_ranges  0x00000000000000c0       0x28 ../cronometrof_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_ranges  0x00000000000000e8       0x28 ../cronometrof_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_ranges  0x0000000000000110       0xa0 ../cronometrof_bsp//libhal_bsp.a(alt_load.o)
+ .debug_ranges  0x00000000000001b0       0x30 ../cronometrof_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_ranges  0x00000000000001e0       0x18 ../cronometrof_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
