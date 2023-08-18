@@ -103,6 +103,8 @@ static void play_btn(void *context)
 {
 	(void) context;
 	if (init==0){init=1;}else{init=0;}
+
+	IOWR_ALTERA_AVALON_TIMER_STATUS(BUTTON_BASE,0);
 }
 
 
