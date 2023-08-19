@@ -19,20 +19,20 @@ preplace inst platform.cpu.reset_bridge -pg 1
 preplace inst platform.cpu.clock_bridge -pg 1
 preplace inst platform.timer_MS -pg 1 -lvl 3 -y 150
 preplace inst platform.clk_0 -pg 1 -lvl 1 -y 650
-preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.id7_segmentos_2_external_connection,(SLAVE)segmentos_2.external_connection) 1 0 3 NJ 740 NJ 740 NJ
-preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)timer_MS.irq,(SLAVE)timer_S.irq,(SLAVE)button.irq,(SLAVE)timer_min.irq,(MASTER)cpu.irq) 1 2 1 730
-preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)timer_min.clk,(SLAVE)segmentos_6.clk,(SLAVE)segmentos_2.clk,(SLAVE)button.clk,(SLAVE)segmentos_1.clk,(SLAVE)timer_S.clk,(SLAVE)ROM.clk1,(SLAVE)segmentos_4.clk,(SLAVE)switchs.clk,(MASTER)clk_0.clk,(SLAVE)timer_MS.clk,(SLAVE)segmentos_3.clk,(SLAVE)cpu.clk,(SLAVE)segmentos_5.clk,(SLAVE)RAM.clk1) 1 1 2 410 1160 790
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)button.external_connection,(SLAVE)platform.button_external_connection) 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)timer_MS.irq,(SLAVE)timer_S.irq,(SLAVE)timer_min.irq,(MASTER)cpu.irq,(SLAVE)button.irq) 1 2 1 730
 preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)segmentos_6.external_connection,(SLAVE)platform.segmentos_6_external_connection) 1 0 3 NJ 1040 NJ 1040 NJ
 preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
 preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)segmentos_5.external_connection,(SLAVE)platform.segmentos_5_external_connection) 1 0 3 NJ 940 NJ 940 NJ
+preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)segmentos_5.reset,(SLAVE)segmentos_1.reset,(SLAVE)segmentos_3.reset,(MASTER)clk_0.clk_reset,(SLAVE)timer_S.reset,(SLAVE)segmentos_6.reset,(SLAVE)button.reset,(SLAVE)timer_min.reset,(SLAVE)segmentos_4.reset,(SLAVE)timer_MS.reset,(SLAVE)cpu.reset,(SLAVE)RAM.reset1,(SLAVE)switchs.reset,(SLAVE)segmentos_2.reset,(SLAVE)ROM.reset1) 1 1 2 430 1260 810
 preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)segmentos_3.external_connection,(SLAVE)platform.id7_segmentos_3_external_connection) 1 0 3 NJ 840 NJ 840 NJ
-preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.button_external_connection,(SLAVE)button.external_connection) 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)switchs.s1,(SLAVE)RAM.s1,(MASTER)cpu.data_master,(SLAVE)button.s1,(SLAVE)segmentos_6.s1,(SLAVE)timer_MS.s1,(SLAVE)segmentos_2.s1,(SLAVE)timer_min.s1,(SLAVE)segmentos_4.s1,(SLAVE)timer_S.s1,(SLAVE)segmentos_1.s1,(SLAVE)segmentos_3.s1,(SLAVE)segmentos_5.s1) 1 2 1 750
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.switchs_external_connection,(SLAVE)switchs.external_connection) 1 0 3 NJ 1140 NJ 1140 NJ
 preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)segmentos_1.external_connection,(SLAVE)platform.id7_segmentos_1_external_connection) 1 0 3 NJ 640 NJ 640 NJ
-preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)timer_S.reset,(SLAVE)segmentos_5.reset,(SLAVE)segmentos_1.reset,(SLAVE)segmentos_3.reset,(SLAVE)RAM.reset1,(SLAVE)switchs.reset,(SLAVE)timer_min.reset,(SLAVE)segmentos_6.reset,(SLAVE)cpu.reset,(SLAVE)segmentos_2.reset,(SLAVE)button.reset,(SLAVE)timer_MS.reset,(MASTER)clk_0.clk_reset,(SLAVE)ROM.reset1,(SLAVE)segmentos_4.reset) 1 1 2 430 1260 810
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.segmentos_5_external_connection,(SLAVE)segmentos_5.external_connection) 1 0 3 NJ 940 NJ 940 NJ
 preplace netloc POINT_TO_POINT<net_container>platform</net_container>(MASTER)cpu.instruction_master,(SLAVE)ROM.s1) 1 2 1 770
-preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)segmentos_3.s1,(SLAVE)timer_min.s1,(SLAVE)segmentos_1.s1,(SLAVE)segmentos_4.s1,(SLAVE)timer_S.s1,(SLAVE)segmentos_2.s1,(SLAVE)button.s1,(MASTER)cpu.data_master,(SLAVE)RAM.s1,(SLAVE)segmentos_6.s1,(SLAVE)timer_MS.s1,(SLAVE)segmentos_5.s1,(SLAVE)switchs.s1) 1 2 1 750
 preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.id7_segmentos_4_external_connection,(SLAVE)segmentos_4.external_connection) 1 0 3 NJ 1240 NJ 1240 NJ
-preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)switchs.external_connection,(SLAVE)platform.switchs_external_connection) 1 0 3 NJ 1140 NJ 1140 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)segmentos_2.external_connection,(SLAVE)platform.id7_segmentos_2_external_connection) 1 0 3 NJ 740 NJ 740 NJ
+preplace netloc FAN_OUT<net_container>platform</net_container>(MASTER)clk_0.clk,(SLAVE)switchs.clk,(SLAVE)timer_S.clk,(SLAVE)ROM.clk1,(SLAVE)segmentos_5.clk,(SLAVE)button.clk,(SLAVE)cpu.clk,(SLAVE)segmentos_1.clk,(SLAVE)segmentos_4.clk,(SLAVE)segmentos_6.clk,(SLAVE)timer_MS.clk,(SLAVE)segmentos_3.clk,(SLAVE)timer_min.clk,(SLAVE)segmentos_2.clk,(SLAVE)RAM.clk1) 1 1 2 410 1160 790
 levelinfo -pg 1 0 200 1000
 levelinfo -hier platform 210 240 490 840 990

@@ -1,0 +1,7 @@
+13:02:48 **** Incremental Build of configuration Nios II for project CronometroFinal ****
+make all 
+makefile:242: ../CronometroFinal_bsp//public.mk: No such file or directory
+make: *** No rule to make target `../CronometroFinal_bsp//public.mk'.  Stop.
+
+13:02:49 Build Finished (took 993ms)
+

@@ -45,3 +45,63 @@ set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:20:09  AGOSTO 14, 202
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name BOARD "DE1-SoC Board"
+set_location_assignment PIN_AA14 -to button_external
+set_location_assignment PIN_AF14 -to clk
+set_location_assignment PIN_AA25 -to id7_segmentos_1[0]
+set_location_assignment PIN_AA26 -to id7_segmentos_1[1]
+set_location_assignment PIN_AB26 -to id7_segmentos_1[2]
+set_location_assignment PIN_AB27 -to id7_segmentos_1[3]
+set_location_assignment PIN_Y27 -to id7_segmentos_1[4]
+set_location_assignment PIN_AA28 -to id7_segmentos_1[5]
+set_location_assignment PIN_V25 -to id7_segmentos_1[6]
+set_location_assignment PIN_W25 -to id7_segmentos_2[0]
+set_location_assignment PIN_V23 -to id7_segmentos_2[1]
+set_location_assignment PIN_W24 -to id7_segmentos_2[2]
+set_location_assignment PIN_W22 -to id7_segmentos_2[3]
+set_location_assignment PIN_Y24 -to id7_segmentos_2[4]
+set_location_assignment PIN_Y23 -to id7_segmentos_2[5]
+set_location_assignment PIN_AA24 -to id7_segmentos_2[6]
+set_location_assignment PIN_AB22 -to id7_segmentos_3[0]
+set_location_assignment PIN_AB25 -to id7_segmentos_3[1]
+set_location_assignment PIN_AB28 -to id7_segmentos_3[2]
+set_location_assignment PIN_AC25 -to id7_segmentos_3[3]
+set_location_assignment PIN_AD25 -to id7_segmentos_3[4]
+set_location_assignment PIN_AC27 -to id7_segmentos_3[5]
+set_location_assignment PIN_AD26 -to id7_segmentos_3[6]
+set_location_assignment PIN_AC30 -to id7_segmentos_4[0]
+set_location_assignment PIN_AC29 -to id7_segmentos_4[1]
+set_location_assignment PIN_AD30 -to id7_segmentos_4[2]
+set_location_assignment PIN_AC28 -to id7_segmentos_4[3]
+set_location_assignment PIN_AD29 -to id7_segmentos_4[4]
+set_location_assignment PIN_AE29 -to id7_segmentos_4[5]
+set_location_assignment PIN_AB23 -to id7_segmentos_4[6]
+set_location_assignment PIN_AF9 -to reset
+set_location_assignment PIN_AD27 -to segmentos_5[0]
+set_location_assignment PIN_AF30 -to segmentos_5[1]
+set_location_assignment PIN_AF29 -to segmentos_5[2]
+set_location_assignment PIN_AG30 -to segmentos_5[3]
+set_location_assignment PIN_AH30 -to segmentos_5[4]
+set_location_assignment PIN_AH29 -to segmentos_5[5]
+set_location_assignment PIN_AJ29 -to segmentos_5[6]
+set_location_assignment PIN_AH28 -to segmentos_6[0]
+set_location_assignment PIN_AG28 -to segmentos_6[1]
+set_location_assignment PIN_AF28 -to segmentos_6[2]
+set_location_assignment PIN_AG27 -to segmentos_6[3]
+set_location_assignment PIN_AE28 -to segmentos_6[4]
+set_location_assignment PIN_AE27 -to segmentos_6[5]
+set_location_assignment PIN_AE26 -to segmentos_6[6]
+set_location_assignment PIN_AB12 -to switchs[0]
+set_location_assignment PIN_AC12 -to switchs[1]
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name QIP_FILE software/Cronometrotaller1/mem_init/meminit.qip
+set_global_assignment -name QSYS_FILE platform.qsys
+set_global_assignment -name SYSTEMVERILOG_FILE cronometro.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
