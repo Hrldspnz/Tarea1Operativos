@@ -347,14 +347,14 @@ int main()
 
 
   /* Event loop never exits. */
-  while (1){
+  while (1);
 
-	  if (edge_capture != 0)
+	  /*if (edge_capture != 0)
 	          {
 
 		  	  play_btn();
-	          }
-  }
+	          }*/
+
 
   return 0;
 }
