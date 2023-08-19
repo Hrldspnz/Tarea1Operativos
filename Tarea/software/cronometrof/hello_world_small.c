@@ -97,19 +97,58 @@ static int cont_mseg=0;
 static int cont_min=0;
 unsigned init = 0;
 //static int fijo = 6;
+volatile int edge_capture;
 
+#ifdef BUTTON_BASE
 
-static void play_btn(void *context)
+#ifdef ALT_ENHANCED_INTERRUPT_API_PRESENT
+static void handle_button_interrupts(void* context)
+#else
+static void handle_button_interrupts(void* context, alt_u32 id)
+#endif
 {
-    (void) context;
-    //if (init==0){init=1;}else{init=0;}
 
-    unsigned Output2 = 127;
+    volatile int* edge_capture_ptr = (volatile int*) context;
+
+    edge_capture_ptr = IORD_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_BASE);
+
+    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_BASE, 0);
+
+
+    IORD_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_BASE);
+}
+
+
+
+static void init_button_pio()
+{
+
+    void* edge_capture_ptr = (void*) &edge_capture;
+
+    IOWR_ALTERA_AVALON_PIO_IRQ_MASK(BUTTON_BASE, 0xf);
+
+    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_BASE, 0x0);
+
+#ifdef ALT_ENHANCED_INTERRUPT_API_PRESENT
+    alt_ic_isr_register(BUTTON_IRQ_INTERRUPT_CONTROLLER_ID, BUTTON_IRQ,
+      handle_button_interrupts, edge_capture_ptr, 0x0);
+#else
+    alt_irq_register( BUTTON_IRQ, edge_capture_ptr,
+      handle_button_interrupts);
+#endif
+}
+#endif /* BUTTON_BASE */
+
+
+static void play_btn()
+{
+
+    unsigned Output2 = 15;
 
     IOWR_ALTERA_AVALON_PIO_DATA(SEGMENTOS_1_BASE,Output2);
 
-    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(BUTTON_BASE, 0x0);
 }
+
 // Funcion encargada del manejo de interrupciones del timer de los segundos
 static void timer_s_inter(void *context)
 {
@@ -249,9 +288,15 @@ static void timer_min_inter(void *context)
     IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_MIN_BASE,0);
 
 }
+
+
 int main()
 { 
     unsigned modo = IORD_ALTERA_AVALON_PIO_DATA(SWITCHS_BASE);
+
+#ifdef BUTTON_BASE
+		init_button_pio();
+#endif
 
 
             if (modo == 2){
@@ -262,13 +307,6 @@ int main()
 
                     //alt_ic_irq_enable(BUTTON_IRQ_INTERRUPT_CONTROLLER_ID, BUTTON_IRQ);
 
-                    alt_ic_isr_register(
-                        BUTTON_IRQ_INTERRUPT_CONTROLLER_ID,
-                        BUTTON_IRQ,
-                        play_btn,
-                        NULL,
-                        NULL
-                    );
 
 
             }else if(modo == 1){
@@ -309,7 +347,15 @@ int main()
 
 
   /* Event loop never exits. */
-  while (1);
+  while (1){
+
+	  if (edge_capture != 0)
+	          {
+
+		  	  play_btn();
+	          }
+  }
 
   return 0;
 }
+
